@@ -8,26 +8,32 @@ enableRobotsTXT: true
 privacy:
   googleAnalytics:
     anonymizeIP: true
+
   twitter:
     enableDNT: true
+
   youtube:
     privacyEnhanced: true
 
-social:
-  twitter: mynewhugosite
-  facebook: mynewhugosite
-
 params:
+  publisher:
+    logo: /apple-touch-icon.png
+    twitter: mynewhugosite
+    facebook: mynewhugosite
+
   author:
     name: Peter
     twitter: peter
     facebook: peter
+
   css:
     - /static/modal.min.css
     - /popup.min.css
+
   js:
     - /ui.min.js
     - /static/logic.min.js
+
   pagination:
     spanStart: 1
     spanMiddleLeft: 1

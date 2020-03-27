@@ -1,5 +1,5 @@
 {{ if .IsPage }}
-  {{ with .Site.Social.facebook }}
+  {{ with .Site.Params.publisher.facebook }}
     <meta property="article:publisher" content="https://www.facebook.com/{{ . }}">
   {{ end }}
 

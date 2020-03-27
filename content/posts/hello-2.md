@@ -1,6 +1,6 @@
 ---
 title: "Hello 2"
-date: 2020-03-26T09:57:39+07:00
+date: 2020-01-27T09:57:39+07:00
 lastmod:
 tags:
   - js

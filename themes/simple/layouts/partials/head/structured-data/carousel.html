@@ -1,0 +1,26 @@
+{{ $pages := slice }}
+
+{{ if .IsHome }}
+  {{ $pages = .Site.RegularPages }}
+{{ else if .IsNode }}
+  {{ $pages = .RegularPages }}
+{{ end }}
+
+{{ with $pages }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {{ range $index, $page := first 10 $pages }}
+          {{ if ne $index 0 }},{{ end }}
+          {
+            "@type": "ListItem",
+            "position": "{{ add $index 1 }}",
+            "url": "{{ $page.Permalink }}"
+          }
+        {{ end }}
+      ]
+    }
+  </script>
+{{ end }}
