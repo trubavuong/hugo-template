@@ -5,6 +5,12 @@ paginate: 1
 googleAnalytics: UA-123456
 enableRobotsTXT: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 privacy:
   googleAnalytics:
     anonymizeIP: true
