@@ -3,6 +3,7 @@ languageCode: en
 title: My New Hugo Site
 paginate: 1
 googleAnalytics: UA-123456
+enableRobotsTXT: true
 
 privacy:
   googleAnalytics:
