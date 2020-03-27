@@ -1,4 +1,36 @@
 baseURL: http://example.org/
 languageCode: en
 title: My New Hugo Site
+paginate: 1
+googleAnalytics: UA-123456
+
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+  twitter:
+    enableDNT: true
+  youtube:
+    privacyEnhanced: true
+
+social:
+  twitter: mynewhugosite
+  facebook: mynewhugosite
+
+params:
+  author:
+    name: Peter
+    twitter: peter
+    facebook: peter
+  css:
+    - /static/modal.min.css
+    - /popup.min.css
+  js:
+    - /ui.min.js
+    - /static/logic.min.js
+  pagination:
+    spanStart: 1
+    spanMiddleLeft: 1
+    spanMiddleRight: 1
+    spanEnd: 1
+
 theme: simple

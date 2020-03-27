@@ -1,0 +1,5 @@
+{{ range .Site.Params.js }}
+  <script src="{{ . | relURL }}"></script>
+{{ end }}
+
+{{ template "_internal/google_analytics_async.html" . }}

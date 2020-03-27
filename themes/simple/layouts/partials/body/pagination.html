@@ -1,0 +1,32 @@
+{{ $paginator := $.Paginator }}
+{{ $totalPages := $paginator.TotalPages }}
+
+{{ if gt $totalPages 1 }}
+  {{ $pageNumber := $paginator.PageNumber }}
+  {{ $paginationConfig := $.Site.Params.pagination }}
+
+  <ul class="pagination">
+    {{ $start1 := 1 }}
+    {{ $start2 := add $start1 $paginationConfig.spanStart }}
+    {{ $start3 := add $start2 1 }}
+
+    {{ $middle1 := sub $pageNumber $paginationConfig.spanMiddleLeft }}
+    {{ $middle2 := add $pageNumber $paginationConfig.spanMiddleRight }}
+
+    {{ $end2 := $totalPages }}
+    {{ $end1 := sub $end2 $paginationConfig.spanEnd }}
+    {{ $end3 := sub $end1 1 }}
+
+    {{ range $paginator.Pagers }}
+      {{ if or (and (ge .PageNumber $start1) (le .PageNumber $start2)) (and (ge .PageNumber $middle1) (le .PageNumber $middle2)) (and (ge .PageNumber $end1) (le .PageNumber $end2)) }}
+        <li{{ if eq .PageNumber $pageNumber }} class="active"{{ end }}>
+          <a{{ if ne .PageNumber $pageNumber }} href="{{ .URL }}"{{ end }}><span>{{ .PageNumber }}</span></a>
+        </li>
+      {{ else if or (eq .PageNumber $start3) (eq .PageNumber $end3) }}
+        <li class="disabled">
+          <span>&hellip;</span>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

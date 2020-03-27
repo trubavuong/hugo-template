@@ -1,0 +1,27 @@
+{{ if .IsPage }}
+  {{ with .Site.Social.facebook }}
+    <meta property="article:publisher" content="https://www.facebook.com/{{ . }}">
+  {{ end }}
+
+  {{ range .Params.authors }}
+    {{ with .facebook }}
+      <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+    {{ end }}
+  {{ else }}
+    {{ with .Site.Params.author.facebook }}
+      <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.tags }}
+    {{ range first 6 . }}
+      <meta property="article:tag" content="{{ . }}">
+    {{ end }}
+  {{ end }}
+
+  <meta property="article:section" content="{{ .Section }}">
+
+  {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+
+  {{ range .Params.authors }}<meta name="author" content="{{ .name }}">{{ else }}{{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ end }}{{ end }}
+{{ end }}

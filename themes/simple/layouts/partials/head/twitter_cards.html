@@ -1,0 +1,9 @@
+{{ range .Params.authors }}
+    {{ with .twitter }}
+      <meta name="twitter:creator" content="@{{ . }}">
+    {{ end }}
+  {{ else }}
+    {{ with .Site.Params.author.twitter }}
+      <meta name="twitter:creator" content="@{{ . }}">
+    {{ end }}
+  {{ end }}
