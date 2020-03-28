@@ -5,6 +5,10 @@ paginate: 1
 googleAnalytics: UA-123456
 enableRobotsTXT: true
 
+taxonomies:
+  series: series
+  tag: tags
+
 outputs:
   home:
     - HTML
