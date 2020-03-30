@@ -1,5 +1,14 @@
 {{ define "layout" }}
   <main>
+    <h1>
+      {{ if eq .Kind "taxonomy" }}
+        {{ .Data.Singular | title }}
+        {{ printf ": " }}
+      {{ end }}
+
+      {{ .Title }}
+    </h1>
+
     {{ range .Paginator.Pages }}
       <li>
         <h1><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h1>

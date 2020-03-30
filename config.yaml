@@ -1,6 +1,7 @@
 baseURL: http://example.org/
 languageCode: en
 title: My New Hugo Site
+theme: simple
 paginate: 1
 googleAnalytics: UA-123456
 enableRobotsTXT: true
@@ -50,4 +51,9 @@ params:
     spanMiddleRight: 1
     spanEnd: 1
 
-theme: simple
+  taxonomies:
+    tags:
+      js:
+        title: JavaScript
+      html:
+        title: HTML
