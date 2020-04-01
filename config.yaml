@@ -46,10 +46,10 @@ params:
     - /static/logic.min.js
 
   pagination:
-    spanStart: 1
-    spanMiddleLeft: 1
-    spanMiddleRight: 1
-    spanEnd: 1
+    spanStart: 0
+    spanMiddleLeft: 2
+    spanMiddleRight: 2
+    spanEnd: 0
 
   taxonomies:
     tags:
