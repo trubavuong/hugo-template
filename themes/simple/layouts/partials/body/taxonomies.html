@@ -1,14 +1,14 @@
 {{ $global := .global }}
 {{ $taxonomy := .taxonomy }}
-{{ $terms := index $global.Params $taxonomy }}
 {{ $useTermAsClass := .useTermAsClass }}
+{{ $terms := index $global.Params $taxonomy }}
 
 {{ with $terms }}
   <ul class="{{ $taxonomy }}">
     {{ range . }}
-      {{ $term := . }}
-      {{ $name := (partial "body/get_taxonomy_config.html" (dict "global" $global "taxonomy" "tags" "term" . "property" "title") | default .) }}
-      <li{{ with $useTermAsClass }} class="{{ $term }}"{{ end }}>
+      {{ $params := (dict "global" $global "taxonomy" "tags" "term" . "property" "title") }}
+      {{ $name := (partial "function/get_taxonomy_property.html" $params) }}
+      <li{{ if $useTermAsClass }} class="{{ . }}"{{ end }}>
         <a href="{{ printf `/%s/%s/` ($taxonomy | urlize) (. | urlize) }}">{{ $name }}</a>
       </li>
     {{ end }}

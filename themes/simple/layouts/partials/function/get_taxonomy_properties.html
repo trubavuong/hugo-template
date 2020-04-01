@@ -1,0 +1,14 @@
+{{ $global := .global }}
+{{ $term := .term }}
+{{ $taxonomy := .taxonomy }}
+
+{{ $result := "" }}
+
+{{ with $global.Site.Params.taxonomies }}
+  {{ $taxonomies := index . $taxonomy }}
+  {{ with $taxonomies }}
+    {{ $result = index . $term }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}

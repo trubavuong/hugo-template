@@ -1,0 +1,11 @@
+{{ $result := .term }}
+
+{{ if .property }}
+  {{ $params := (dict "global" .global "taxonomy" .taxonomy "term" .term) }}
+  {{ $properties := (partial "function/get_taxonomy_properties.html" $params) }}
+  {{ if $properties }}
+    {{ $result = index $properties .property }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}
