@@ -46,7 +46,7 @@
           "url": "{{ .Site.Params.publisher.logo | absURL }}"
         }
       },
-      "description": "{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
+      "description": "{{ partial `function/get_page_description.html` . }}"
     }
   </script>
 {{ end }}

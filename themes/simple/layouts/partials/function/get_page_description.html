@@ -1,0 +1,15 @@
+{{ $result := "" }}
+
+{{ with .Description }}
+  {{ $result = . }}
+{{ else }}
+  {{ if .IsPage }}
+    {{ $result = .Summary }}
+  {{ else }}
+    {{ with .Site.Params.description }}
+      {{ $result = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}

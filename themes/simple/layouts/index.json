@@ -1,20 +1,8 @@
 {{ $items := slice }}
 {{ range .Site.RegularPages }}
-  {{ $description := "" }}
-
-  {{ with .Description }}
-    {{ $description = . }}
-  {{ else }}
-    {{ if .IsPage }}
-      {{ $description = .Summary }}
-    {{ else }}
-      {{ with .Site.Params.description }}
-        {{ $description = . }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{ $items = $items | append (dict "url" .RelPermalink "title" .Title "description" $description) }}
+  {{ $description := partial `function/get_page_description.html` . }}
+  {{ $item := (dict "url" .RelPermalink "title" .Title "description" $description) }}
+  {{ $items = $items | append $item }}
 {{ end }}
 
 {{ dict "data" $items | jsonify }}
