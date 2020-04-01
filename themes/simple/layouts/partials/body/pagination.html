@@ -20,12 +20,10 @@
     {{ range $paginator.Pagers }}
       {{ if or (and (ge .PageNumber $start1) (le .PageNumber $start2)) (and (ge .PageNumber $middle1) (le .PageNumber $middle2)) (and (ge .PageNumber $end1) (le .PageNumber $end2)) }}
         <li{{ if eq .PageNumber $pageNumber }} class="active"{{ end }}>
-          <a{{ if ne .PageNumber $pageNumber }} href="{{ .URL }}"{{ end }}><span>{{ .PageNumber }}</span></a>
+          <a href="{{ .URL }}">{{ .PageNumber }}</a>
         </li>
       {{ else if or (eq .PageNumber $start3) (eq .PageNumber $end3) }}
-        <li class="disabled">
-          <span>&hellip;</span>
-        </li>
+        <li class="disabled">&hellip;</li>
       {{ end }}
     {{ end }}
   </ul>

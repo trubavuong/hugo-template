@@ -4,6 +4,7 @@
     <div>{{ partial "body/taxonomies.html" (dict "global" . "taxonomy" "tags" "useTermAsClass" true) }}</div>
     <div>{{ .Content }}</div>
   </main>
+
   <aside>
     {{ .TableOfContents }}
   </aside>
