@@ -3,10 +3,9 @@
   <head>
     <title>{{ block "title" . }}{{ if .IsPage }}{{ .Title }} {{ .Site.Params.titleDelim | default "|" }} {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
     {{ partial "head/link.html" . }}
-    {{ partial "head/meta.html" . }}
+    {{ partial "head/seo/base.html" . }}
     {{ partial "head/favicon.html" . }}
     {{ partial "head/css.html" . }}
-    {{ partial "head/structured-data/base.html" . }}
   </head>
   <body>
     {{ block "layout" . }}{{ end }}

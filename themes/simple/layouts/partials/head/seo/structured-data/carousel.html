@@ -16,7 +16,7 @@
           {{ if ne $index 0 }},{{ end }}
           {
             "@type": "ListItem",
-            "position": "{{ add $index 1 }}",
+            "position": {{ add $index 1 }},
             "url": "{{ $page.Permalink }}"
           }
         {{ end }}

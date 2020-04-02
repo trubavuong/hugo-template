@@ -1,24 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="{{ partial `function/get_page_description.html` . }}">
+
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ partial `function/get_page_description.html` . }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 
-{{ with $.Params.images }}
+{{ with .Params.images }}
+  <meta name="twitter:card" content="summary_large_image">
   {{ range first 6 . }}
     <meta property="og:image" content="{{ . | absURL }}">
   {{ end }}
 {{ else }}
-  {{ $images := $.Resources.ByType "image" }}
+  {{ $images := .Resources.ByType "image" }}
   {{ $featured := $images.GetMatch "*feature*" }}
   {{ if not $featured }}
     {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
   {{ end }}
 
   {{ with $featured }}
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="{{ $featured.Permalink }}">
   {{ else }}
-    {{ with $.Site.Params.images }}
+    {{ with .Site.Params.images }}
+      <meta name="twitter:card" content="summary_large_image">
       <meta property="og:image" content="{{ index . 0 | absURL }}">
+    {{ else }}
+      <meta name="twitter:card" content="summary">
     {{ end }}
   {{ end }}
 {{ end }}
@@ -77,12 +86,30 @@
   {{ end }}
 
   {{ range .Params.authors }}
+    {{ with .name }}
+      <meta name="author" content="{{ . }}">
+    {{ end }}
+
     {{ with .facebook }}
       <meta property="article:author" content="https://www.facebook.com/{{ . }}">
     {{ end }}
+
+    {{ with .twitter }}
+      <meta name="twitter:creator" content="@{{ . }}">
+    {{ end }}
   {{ else }}
-    {{ with .Site.Params.author.facebook }}
-      <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+    {{ with .Site.Params.author }}
+      {{ with .name }}
+        <meta name="author" content="{{ . }}">
+      {{ end }}
+
+      {{ with .facebook }}
+        <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+      {{ end }}
+
+      {{ with .twitter }}
+        <meta name="twitter:creator" content="@{{ . }}">
+      {{ end }}
     {{ end }}
   {{ end }}
 
@@ -96,5 +123,7 @@
 
   {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
 
-  {{ range .Params.authors }}<meta name="author" content="{{ .name }}">{{ else }}{{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ end }}{{ end }}
+  {{ with .Site.Params.publisher.twitter }}
+    <meta name="twitter:site" content="@{{ . }}">
+  {{ end }}
 {{ end }}
