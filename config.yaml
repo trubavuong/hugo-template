@@ -1,6 +1,6 @@
 baseURL: http://example.org/
 languageCode: en
-title: My New Hugo Site
+title: My New "Hugo Site"
 theme: simple
 paginate: 1
 googleAnalytics: UA-123456

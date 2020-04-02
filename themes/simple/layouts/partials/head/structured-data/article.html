@@ -9,7 +9,7 @@
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
       },
-      "headline": "{{ .Title }}",
+      "headline": {{ .Title | partial "function/stringify" }},
       {{ with .Params.images }}
         "image": [
           {{ range $index, $value := . }}
@@ -26,7 +26,7 @@
             {{ if ne $index 0 }},{{ end }}
             {
               "@type": "Person",
-              "name": "{{ $value.name }}"
+              "name": {{ $value.name | partial "function/stringify" }}
             }
           {{ end }}
         ],
@@ -34,19 +34,19 @@
         {{ with .Site.Params.author.name }}
           "author": {
             "@type": "Person",
-            "name": "{{ . }}"
+            "name": {{ . | partial "function/stringify" }}
           },
         {{ end }}
       {{ end }}
       "publisher": {
         "@type": "Organization",
-        "name": "{{ .Site.Title }}",
+        "name": {{ .Site.Title | partial "function/stringify" }},
         "logo": {
           "@type": "ImageObject",
           "url": "{{ .Site.Params.publisher.logo | absURL }}"
         }
       },
-      "description": "{{ partial `function/get_page_description.html` . }}"
+      "description": {{ partial `function/get_page_description.html` . | partial "function/stringify" }}
     }
   </script>
 {{ end }}
