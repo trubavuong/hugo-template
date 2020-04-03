@@ -1,7 +1,24 @@
+{{ $favicon := .Site.Params.favicon }}
+
+{{ $maskIcon := "#5bbad5" }}
+{{ with $favicon.maskIcon }}
+  {{ $maskIcon = . }}
+{{ end }}
+
+{{ $themeColor := "#ffffff" }}
+{{ with $favicon.themeColor }}
+  {{ $themeColor = . }}
+{{ end }}
+
+{{ $msapplicationTileColor := "#da532c" }}
+{{ with $favicon.msapplicationTileColor }}
+  {{ $msapplicationTileColor = . }}
+{{ end }}
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ $maskIcon }}">
+<meta name="msapplication-TileColor" content="{{ $msapplicationTileColor }}">
+<meta name="theme-color" content="{{ $themeColor }}">

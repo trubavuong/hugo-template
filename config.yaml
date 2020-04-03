@@ -37,14 +37,6 @@ params:
     twitter: peter
     facebook: peter
 
-  css:
-    - /static/modal.min.css
-    - /popup.min.css
-
-  js:
-    - /ui.min.js
-    - /static/logic.min.js
-
   pagination:
     spanStart: 0
     spanMiddleLeft: 2
@@ -57,3 +49,16 @@ params:
         title: JavaScript
       html:
         title: HTML
+
+  css:
+    - /static/modal.min.css
+    - /popup.min.css
+
+  js:
+    - /ui.min.js
+    - /static/logic.min.js
+
+  favicon:
+    maskIcon: "#aaaaaa"
+    themeColor: "#000000"
+    msapplicationTileColor: "#bbbbbb"
