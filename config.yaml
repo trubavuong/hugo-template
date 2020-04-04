@@ -57,6 +57,7 @@ params:
   js:
     - /ui.min.js
     - /static/logic.min.js
+    - bundle.min.js
 
   favicon:
     maskIcon: "#aaaaaa"
