@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "scripts": {
     "build-js": "uglifyjs $npm_package_x_js --compress --mangle --output assets/bundle.min.js",
-    "build-assets": "npm run build-js"
+    "build-css": "postcss $npm_package_x_css --no-map --output assets/bundle.min.css",
+    "build-assets": "npm run build-js && npm run build-css"
   },
   "x": {
-    "js": "src/js/addEvent.js src/js/clipboard.js src/js/code.js"
+    "js": "src/js/addEvent.js src/js/clipboard.js src/js/code.js",
+    "css": "src/css/index.css"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
     "uglify-js": "^3.8.1"
   }
 }
