@@ -47,16 +47,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni, reic
 
 ### Way to stay
 
-{{< highlight html >}}
+{{< code lang=html title=static/about.html >}}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Example HTML5 Document</title>
+  </head>
+  
+  <body>
+    <p>Test</p>
+  </body>
 </html>
-{{< /highlight >}}
+{{< /code >}}

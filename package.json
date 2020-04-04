@@ -1,0 +1,14 @@
+{
+  "name": "hugo-template",
+  "version": "1.0.0",
+  "scripts": {
+    "build-js": "uglifyjs $npm_package_x_js --compress --mangle --output assets/bundle.min.js",
+    "build-assets": "npm run build-js"
+  },
+  "x": {
+    "js": "src/js/addEvent.js src/js/clipboard.js src/js/code.js"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.8.1"
+  }
+}

@@ -1,0 +1,4 @@
+<div class="highlight-panel">
+  <div class="highlight-title">{{ .Get "title" | default (.Get "lang") }}</div>
+  {{ highlight (trim .Inner "\n\r") (.Get "lang") (.Get "options") }}
+</div>
