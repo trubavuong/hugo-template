@@ -1,3 +1,15 @@
 {{ range .Site.Params.css }}
-  <link rel="stylesheet" href="{{ . | relURL }}">
+  {{ $src := (. | relURL) }}
+  {{ $integrity := "" }}
+
+  {{ if not (and (hasPrefix . "http://") (hasPrefix . "https://")) }}
+    {{ $resource := resources.Get . }}
+    {{ with $resource }}
+      {{ $style := . | fingerprint "sha512" }}
+      {{ $src = $style.RelPermalink }}
+      {{ $integrity = $style.Data.Integrity }}
+    {{ end }}
+  {{ end }}
+
+  <link rel="stylesheet" href="{{ $src }}"{{ with $integrity }} integrity="{{ . }}"{{ end }}>
 {{ end }}

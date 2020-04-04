@@ -53,6 +53,7 @@ params:
   css:
     - /static/modal.min.css
     - /popup.min.css
+    - bundle.min.css
 
   js:
     - /ui.min.js
