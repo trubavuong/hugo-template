@@ -7,8 +7,8 @@
     "build-assets": "npm run build-js && npm run build-css"
   },
   "x": {
-    "js": "src/js/addEvent.js src/js/clipboard.js src/js/code.js",
-    "css": "src/css/index.css"
+    "js": "themes/simple/src/js/addEvent.js themes/simple/src/js/clipboard.js themes/simple/src/js/code.js",
+    "css": "themes/simple/src/css/index.css"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
