@@ -64,3 +64,5 @@ params:
     maskIcon: "#aaaaaa"
     themeColor: "#000000"
     msapplicationTileColor: "#bbbbbb"
+
+  titleDelim: "|"

@@ -2,13 +2,12 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <title>{{ block "title" . }}{{ if .IsPage }}{{ .Title }} {{ .Site.Params.titleDelim | default "|" }} {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
-    {{ partial "head/link.html" . }}
-    {{ partial "head/seo/base.html" . }}
-    {{ partial "head/favicon.html" . }}
-    {{ partial "head/css.html" . }}
+    {{ partial "seo/index.html" . }}
+    {{ partial "favicon.html" . }}
+    {{ partial "css.html" . }}
   </head>
   <body>
     {{ block "layout" . }}{{ end }}
-    {{ partial "body/js.html" . }}
+    {{ partial "js.html" . }}
   </body>
 </html>

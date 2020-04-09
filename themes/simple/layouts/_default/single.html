@@ -1,7 +1,7 @@
 {{ define "layout" }}
   <main>
     <h1>{{ .Title }}</h1>
-    <div>{{ partial "body/taxonomies.html" (dict "global" . "taxonomy" "tags" "useTermAsClass" true) }}</div>
+    <div>{{ partial "taxonomies.html" (dict "global" . "taxonomy" "tags" "useTermAsClass" true) }}</div>
     <div>{{ .Content }}</div>
   </main>
 
