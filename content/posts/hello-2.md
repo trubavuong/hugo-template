@@ -13,6 +13,7 @@ authors:
   - name: Bob
     twitter: bob
     facebook: bob
+share:
 draft: false
 ---
 

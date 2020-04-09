@@ -12,6 +12,9 @@ authors:
   - name: Bob
     twitter: bob
     facebook: bob
+share:
+  - facebook
+  - twitter
 draft: false
 ---
 

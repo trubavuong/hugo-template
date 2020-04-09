@@ -27,6 +27,8 @@ privacy:
     privacyEnhanced: true
 
 params:
+  titleDelim: "|"
+
   publisher:
     logo: /apple-touch-icon.png
     twitter: mynewhugosite
@@ -65,4 +67,5 @@ params:
     themeColor: "#000000"
     msapplicationTileColor: "#bbbbbb"
 
-  titleDelim: "|"
+  share:
+    - twitter

@@ -1,0 +1,72 @@
+{{ if .Param "share" }}
+  {{ $url := .Permalink | absURL }}
+  {{ $title := .Title }}
+  {{ $description := partial `function/get_page_description.html` . }}
+
+  {{ $tags := "" }}
+  {{ with .Params.tags }}
+    {{ $tags = delimit . "," }}
+  {{ end }}
+
+  {{ $twitter := "" }}
+  {{ with .Params.authors }}
+    {{ if eq (len .) 1 }}
+      {{ with (index . 0) }}
+        {{ with .twitter }}
+          {{ $twitter = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ with .Site.Params.author }}
+      {{ with .twitter }}
+        {{ $twitter = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <div class="share">
+    <div class="share__message">Share on</div>
+    <div class="share__buttons">
+      {{ range .Param "share" }}
+        {{ if eq . "facebook" }}
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url }}" title="Facebook" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/facebook-square.svg" }}
+          </a>
+        {{ else if eq . "twitter" }}
+          <a href="https://twitter.com/intent/tweet?text={{ $title }}&url={{ $url }}{{ with $tags }}&hashtags={{ . }}{{ end }}{{ with $twitter }}&via={{ . }}{{ end }}" title="Twitter" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/twitter-square.svg" }}
+          </a>
+        {{ else if eq . "reddit" }}
+          <a href="https://www.reddit.com/submit?url={{ $url }}&title={{ $title }}" title="Reddit" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/reddit-square.svg" }}
+          </a>
+        {{ else if eq . "linkedin" }}
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}&summary={{ $description }}" title="LinkedIn" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/linkedin.svg" }}
+          </a>
+        {{ else if eq . "vk" }}
+          <a href="https://vk.com//share.php?url={{ $url }}&title={{ $title }}" title="VK" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/vk.svg" }}
+          </a>
+        {{ else if eq . "tumblr" }}
+          <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&content={{ $url }}&title={{ $title }}&caption={{ $description }}" title="Tumblr" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/tumblr-square.svg" }}
+          </a>
+        {{ else if eq . "telegram" }}
+          <a href="https://telegram.me/share/url?url={{ $url }}&text={{ $title }}" title="Telegram" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/telegram.svg" }}
+          </a>
+        {{ else if eq . "whatsapp" }}
+          <a href="whatsapp://send?text={{ $title }} - {{ $url }}" title="WhatsApp" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/whatsapp-square.svg" }}
+          </a>
+        {{ else if eq . "email" }}
+          <a href="mailto:?subject={{ $title }}&body={{ $url }}" title="Email" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+            {{ partial "svg/brands/envelope-square.svg" }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

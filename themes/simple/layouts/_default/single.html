@@ -3,6 +3,7 @@
     <h1>{{ .Title }}</h1>
     <div>{{ partial "taxonomies.html" (dict "global" . "taxonomy" "tags" "useTermAsClass" true) }}</div>
     <div>{{ .Content }}</div>
+    {{ partial "share.html" . }}
   </main>
 
   <aside>

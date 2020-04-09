@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
-    require('autoprefixer'),
     require('postcss-import'),
+    require('postcss-nested'),
+    require('autoprefixer'),
     require('cssnano')({
       preset: ['default', {
         discardComments: {
