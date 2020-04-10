@@ -16,6 +16,7 @@
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
     "uglify-js": "^3.8.1"
   }
 }
