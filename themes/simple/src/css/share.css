@@ -1,6 +1,32 @@
-.share__button {
+.share {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.share__message {
+  padding: 0.5rem 0;
+  font-weight: 700;
+}
+
+.share__items {
+  a {
+    text-decoration: none;
+  }
+}
+
+.share__item {
+  display: inline-block;
+  margin: 0.125rem;
+
   svg {
     width: 36px;
     height: 36px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translateY(-0.25rem);
+    }
   }
 }

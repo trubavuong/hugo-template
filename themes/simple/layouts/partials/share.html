@@ -27,42 +27,42 @@
 
   <div class="share">
     <div class="share__message">Share on</div>
-    <div class="share__buttons">
+    <div class="share__items">
       {{ range .Param "share" }}
         {{ if eq . "facebook" }}
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url }}" title="Facebook" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/facebook-square.svg" }}
           </a>
         {{ else if eq . "twitter" }}
-          <a href="https://twitter.com/intent/tweet?text={{ $title }}&url={{ $url }}{{ with $tags }}&hashtags={{ . }}{{ end }}{{ with $twitter }}&via={{ . }}{{ end }}" title="Twitter" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://twitter.com/intent/tweet?text={{ $title }}&url={{ $url }}{{ with $tags }}&hashtags={{ . }}{{ end }}{{ with $twitter }}&via={{ . }}{{ end }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/twitter-square.svg" }}
           </a>
         {{ else if eq . "reddit" }}
-          <a href="https://www.reddit.com/submit?url={{ $url }}&title={{ $title }}" title="Reddit" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://www.reddit.com/submit?url={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/reddit-square.svg" }}
           </a>
         {{ else if eq . "linkedin" }}
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}&summary={{ $description }}" title="LinkedIn" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}&summary={{ $description }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/linkedin.svg" }}
           </a>
         {{ else if eq . "vk" }}
-          <a href="https://vk.com//share.php?url={{ $url }}&title={{ $title }}" title="VK" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://vk.com//share.php?url={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/vk.svg" }}
           </a>
         {{ else if eq . "tumblr" }}
-          <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&content={{ $url }}&title={{ $title }}&caption={{ $description }}" title="Tumblr" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&content={{ $url }}&title={{ $title }}&caption={{ $description }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/tumblr-square.svg" }}
           </a>
         {{ else if eq . "telegram" }}
-          <a href="https://telegram.me/share/url?url={{ $url }}&text={{ $title }}" title="Telegram" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="https://telegram.me/share/url?url={{ $url }}&text={{ $title }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/telegram.svg" }}
           </a>
         {{ else if eq . "whatsapp" }}
-          <a href="whatsapp://send?text={{ $title }} - {{ $url }}" title="WhatsApp" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="whatsapp://send?text={{ $title }} - {{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/whatsapp-square.svg" }}
           </a>
         {{ else if eq . "email" }}
-          <a href="mailto:?subject={{ $title }}&body={{ $url }}" title="Email" rel="nofollow noopener noreferrer" target="_blank" class="share__button">
+          <a href="mailto:?subject={{ $title }}&body={{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/envelope-square.svg" }}
           </a>
         {{ end }}
