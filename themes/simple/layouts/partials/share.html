@@ -50,7 +50,7 @@
             {{ partial "svg/brands/vk.svg" }}
           </a>
         {{ else if eq . "tumblr" }}
-          <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&content={{ $url }}&title={{ $title }}&caption={{ $description }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
+          <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/tumblr-square.svg" }}
           </a>
         {{ else if eq . "telegram" }}

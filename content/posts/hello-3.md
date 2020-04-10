@@ -15,6 +15,8 @@ authors:
 share:
   - facebook
   - twitter
+  - linkedin
+  - tumblr
 draft: false
 ---
 
