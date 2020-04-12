@@ -1,4 +1,9 @@
+{{ $lang := .Get "lang" }}
+{{ $title := .Get "title" }}
+{{ $options := .Get "options" }}
+{{ $inner := trim .Inner "\n\r" }}
+
 <div class="highlight-panel">
-  <div class="highlight-title">{{ .Get "title" | default (.Get "lang") }}</div>
-  {{ highlight (trim .Inner "\n\r") (.Get "lang") (.Get "options") }}
+  <div class="highlight-title">{{ $title | default $lang }}</div>
+  {{ highlight $inner $lang $options }}
 </div>

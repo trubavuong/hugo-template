@@ -16,6 +16,11 @@ outputs:
     - RSS
     - JSON
 
+markup:
+  highlight:
+    tabWidth: 2
+    lineNumbersInTable: false
+
 privacy:
   googleAnalytics:
     anonymizeIP: true

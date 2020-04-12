@@ -17,6 +17,9 @@
   "[html]": {
     "editor.formatOnSave": false
   },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
