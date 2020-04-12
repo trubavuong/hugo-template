@@ -4,6 +4,10 @@
 {{ $inner := trim .Inner "\n\r" }}
 
 <div class="highlight-panel">
-  <div class="highlight-title">{{ $title | default $lang }}</div>
-  {{ highlight $inner $lang $options }}
+  <div class="highlight-panel__title">
+    <span>{{ $title | default $lang }}</span>
+  </div>
+  <div class="highlight-panel__code">
+    {{ highlight $inner $lang $options }}
+  </div>
 </div>

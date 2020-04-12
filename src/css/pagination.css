@@ -9,7 +9,6 @@
   a {
     padding: 0.5rem 1rem;
     border: 1px solid $pagination_border;
-    border-radius: $border_radius;
     color: $pagination_text;
     background: $pagination_background;
     text-decoration: none;

@@ -44,15 +44,19 @@ h3 {
   font-size: $font_size_h3;
 }
 
+body,
 button,
 input,
 select,
 textarea {
   margin: 0;
+  font-family: $font_sans;
 }
 
 html {
   box-sizing: border-box;
+  font-size: $font_size;
+  line-height: 1.5;
 }
 
 *,
@@ -87,10 +91,8 @@ th:not([align]) {
   text-align: left;
 }
 
-body {
-  font-family: $font_sans;
-  font-size: $font_size;
-  line-height: 1.5;
+button {
+  cursor: pointer;
 }
 
 blockquote {
@@ -100,7 +102,6 @@ blockquote {
 
 pre {
   padding: 0.5rem 1rem;
-  border-radius: $border_radius;
   overflow: auto;
 }
 
@@ -112,9 +113,7 @@ code {
 
 :not(pre) > code {
   margin: 0 0.125rem;
-  padding: 0.25rem;
-  border: 1px solid $code_border;
-  border-radius: $border_radius;
+  padding: 0.125rem 0.375rem;
   font-size: $font_size_sm;
   color: $code_text;
   background: $code_background;
