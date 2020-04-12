@@ -119,3 +119,13 @@ code {
   color: $code_text;
   background: $code_background;
 }
+
+ul,
+ol {
+  margin-left: 3rem;
+
+  ul,
+  ol {
+    margin-left: 3rem;
+  }
+}

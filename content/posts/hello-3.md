@@ -99,14 +99,14 @@ $ NODE_ENV=production node app
 
 Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
 
-| Plugin           | README                                    |
-| ---------------- | ----------------------------------------- |
-| Dropbox          | [plugins/dropbox/README.md][pldb]         |
-| GitHub           | [plugins/github/README.md][plgh]          |
-| Google Drive     | [plugins/googledrive/README.md][plgd]     |
-| OneDrive         | [plugins/onedrive/README.md][plod]        |
-| Medium           | [plugins/medium/README.md][plme]          |
-| Google Analytics | [plugins/googleanalytics/README.md][plga] |
+| Plugin           | README                                    | Rating |
+| ---------------- | ----------------------------------------- | ------ |
+| Dropbox          | [plugins/dropbox/README.md][pldb]         | Good   |
+| GitHub           | [plugins/github/README.md][plgh]          | Good   |
+| Google Drive     | [plugins/googledrive/README.md][plgd]     | Good   |
+| OneDrive         | [plugins/onedrive/README.md][plod]        | Good   |
+| Medium           | [plugins/medium/README.md][plme]          | Good   |
+| Google Analytics | [plugins/googleanalytics/README.md][plga] | Good   |
 
 ### Development
 

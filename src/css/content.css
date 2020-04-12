@@ -3,12 +3,12 @@
     margin-top: 1rem;
   }
 
-  ul,
-  ol {
-    margin-left: 3rem;
-  }
-
   li + li {
     margin-top: 0.25rem;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
   }
 }
