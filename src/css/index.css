@@ -1,7 +1,5 @@
 @import "./variables.css";
-
-@import "./reset.css";
+@import "./typography.css";
 @import "./share.css";
 @import "./pagination.css";
-@import "./body.css";
 @import "./content.css";

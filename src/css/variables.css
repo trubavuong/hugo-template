@@ -126,10 +126,18 @@ $blockquote_border: $gray_400;
 
 $table_border: $gray_500;
 
-$font_sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-$font_mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
+$font_sans: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font_size: 18px;
 $font_size_sm: 0.875rem;
+$font_size_h1: 2.5rem;
+$font_size_h2: 1.875rem;
+$font_size_h3: 1.325rem;
+
+$font_mono: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;
+$font_mono_size: 16px;
 
 $border_radius: 0.125rem;
+
+$icon_size: 36px;

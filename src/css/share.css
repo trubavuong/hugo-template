@@ -19,8 +19,8 @@
   margin: 0.125rem;
 
   svg {
-    width: 36px;
-    height: 36px;
+    width: $icon_size;
+    height: $icon_size;
     transition: all 0.2s ease-in-out;
   }
 

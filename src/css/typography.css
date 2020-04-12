@@ -1,0 +1,121 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+pre,
+figure,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $font_size_h1;
+}
+
+h2 {
+  font-size: $font_size_h2;
+}
+
+h3 {
+  font-size: $font_size_h3;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0.5rem;
+  border: 1px solid $table_border;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+body {
+  font-family: $font_sans;
+  font-size: $font_size;
+  line-height: 1.5;
+}
+
+blockquote {
+  padding-left: 0.75rem;
+  border-left: 0.25rem solid $blockquote_border;
+}
+
+pre {
+  padding: 0.5rem 1rem;
+  border-radius: $border_radius;
+  overflow: auto;
+}
+
+pre,
+code {
+  font-family: $font_mono;
+  font-size: $font_mono_size;
+}
+
+:not(pre) > code {
+  margin: 0 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid $code_border;
+  border-radius: $border_radius;
+  font-size: $font_size_sm;
+  color: $code_text;
+  background: $code_background;
+}
