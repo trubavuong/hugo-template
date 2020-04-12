@@ -19,7 +19,7 @@ outputs:
 markup:
   highlight:
     tabWidth: 2
-    lineNumbersInTable: false
+    noClasses: false
 
 privacy:
   googleAnalytics:
