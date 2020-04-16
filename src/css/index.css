@@ -2,6 +2,6 @@
 @import "./typography.css";
 @import "./share.css";
 @import "./pagination.css";
-@import "./content.css";
+@import "./post-content.css";
 @import "./syntax.css";
-@import "./highlight.css";
+@import "./code.css";

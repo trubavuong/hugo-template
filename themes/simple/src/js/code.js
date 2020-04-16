@@ -1,7 +1,7 @@
 (function () {
   function addCopyButtonToHighlightPanel(panel) {
-    var panelTitle = panel.querySelector(".highlight-panel__title");
-    if (panelTitle) {
+    var panelHeader = panel.querySelector(".highlight-panel__header");
+    if (panelHeader) {
       var button = document.createElement("button");
       button.innerText = "Copy";
       button.title = "Copy to clipboard";
@@ -14,7 +14,7 @@
         }
       });
 
-      panelTitle.appendChild(button);
+      panelHeader.appendChild(button);
     }
   }
 

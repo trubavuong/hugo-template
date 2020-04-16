@@ -47,6 +47,8 @@ You can also:
 - Drag and drop markdown and HTML files into Dillinger
 - Export documents as Markdown, HTML and PDF
 
+## Details
+
 Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email. As [John Gruber] writes on the [Markdown site][df1]
 
 > The overriding design goal for Markdown's
@@ -56,6 +58,14 @@ Markdown is a lightweight markup language based on the formatting conventions th
 > publishable as-is, as plain text, without
 > looking like it's been marked up with tags
 > or formatting instructions.
+>
+> The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+> 
+> &mdash; Mike [Breakdance](https://breakdance.github.io/breakdance/)
 
 This text you see here is _actually_ written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
 
@@ -114,6 +124,8 @@ Want to contribute? Great!
 
 Dillinger uses Gulp + Webpack for fast developing.
 Make a change in your file and instantaneously see your updates!
+
+{{< figure src="/posts/hello/a.jpg" alt="Picture of something" caption="Steve Francia" >}}
 
 Open your favorite Terminal and run these commands.
 

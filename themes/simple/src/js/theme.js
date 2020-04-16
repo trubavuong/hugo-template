@@ -18,16 +18,16 @@ if (window.localStorage) {
       }
     }
 
-    function switchTheme() {
+    function toggleTheme() {
       var theme = localStorage.getItem(themeKey);
       localStorage.setItem(themeKey, theme > 0 ? '0' : '1');
 
       loadTheme();
     }
 
-    var elements = document.getElementsByClassName('theme-switch');
+    var elements = document.getElementsByClassName('theme-toggler');
     for (var i = 0; i < elements.length; i += 1) {
-      addEvent(elements[i], "click", switchTheme);
+      addEvent(elements[i], "click", toggleTheme);
     }
 
     loadTheme();

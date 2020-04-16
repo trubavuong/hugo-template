@@ -1,0 +1,25 @@
+.post-content {
+  > * + *,
+  blockquote > * + * {
+    margin-top: 1rem;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
+  }
+
+  a {
+    color: $link_text;
+    text-decoration: none;
+    border-bottom: 0.125rem solid $link_border;
+
+    &:hover {
+      border-bottom-width: 0.25rem;
+    }
+  }
+}

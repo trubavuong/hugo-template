@@ -111,6 +111,26 @@ $primary_700: $green_700;
 $primary_800: $green_800;
 $primary_900: $green_900;
 
+$secondary_100: $blue_100;
+$secondary_200: $blue_200;
+$secondary_300: $blue_300;
+$secondary_400: $blue_400;
+$secondary_500: $blue_500;
+$secondary_600: $blue_600;
+$secondary_700: $blue_700;
+$secondary_800: $blue_800;
+$secondary_900: $blue_900;
+
+$text_special_100: $red_100;
+$text_special_200: $red_200;
+$text_special_300: $red_300;
+$text_special_400: $red_400;
+$text_special_500: $red_500;
+$text_special_600: $red_600;
+$text_special_700: $red_700;
+$text_special_800: $red_800;
+$text_special_900: $red_900;
+
 $pagination_text: $primary_600;
 $pagination_border: $primary_600;
 $pagination_background: $white;
@@ -118,16 +138,18 @@ $pagination_active_text: $white;
 $pagination_active_background: $primary_600;
 $pagination_disabled_text: $gray_800;
 
-$highlight_panel_title_text: $white;
-$highlight_panel_title_background: $gray_600;
-$highlight_panel_title_btn_border: $gray_500;
+$highlight_panel_header_border: $gray_700;
 
-$code_text: $gray_800;
-$code_background: $gray_200;
+$code_text: $text_special_700;
+$code_background: $text_special_100;
+
+$link_text: $text_special_700;
+$link_border: $text_special_600;
 
 $blockquote_border: $gray_400;
 
 $table_border: $gray_500;
+$table_header_background: $gray_300;
 
 $font_sans: "Fira Code", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif;

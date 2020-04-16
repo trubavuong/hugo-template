@@ -1,4 +1,4 @@
-.highlight-panel__title {
+.highlight-panel__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,7 +6,6 @@
   overflow-wrap: break-word;
   padding: 0.25rem 1rem;
   font-size: $font_size_sm;
-  font-style: italic;
 
   > span {
     max-width: 100%;
@@ -14,11 +13,7 @@
 
   &,
   > button {
-    color: $highlight_panel_title_text;
-    background: $highlight_panel_title_background;
-  }
-
-  > button {
-    border: 1px solid $highlight_panel_title_btn_border;
+    border: 1px solid $highlight_panel_header_border;
+    background: transparent;
   }
 }

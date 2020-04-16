@@ -26,8 +26,8 @@
   {{ end }}
 
   <div class="share">
-    <div class="share__message">Share on</div>
-    <div class="share__items">
+    <div class="share__header">Share on</div>
+    <div class="share__body">
       {{ range .Param "share" }}
         {{ if eq . "facebook" }}
           <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
