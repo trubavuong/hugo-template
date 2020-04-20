@@ -20,6 +20,7 @@ share:
   - twitter
   - linkedin
   - tumblr
+  - copy
 draft: false
 ---
 

@@ -61,6 +61,10 @@
           <a href="whatsapp://send?text={{ $title }} - {{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/whatsapp-square.svg" }}
           </a>
+        {{ else if eq . "copy" }}
+          <a href="#" onclick="copy('{{ $url }}');return false;" rel="nofollow" class="share__item">
+            {{ partial "svg/solid/clipboard.svg" }}
+          </a>
         {{ else if eq . "email" }}
           <a href="mailto:?subject={{ $title }}&body={{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="share__item">
             {{ partial "svg/brands/envelope-square.svg" }}
