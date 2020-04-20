@@ -130,11 +130,20 @@ ol {
 
   ul,
   ol {
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 }
 
 figcaption {
   font-size: $font_size_sm;
   font-style: italic;
+}
+
+body {
+  margin: 0 auto;
+  max-width: $body_width;
+}
+
+a {
+  color: $link_text;
 }

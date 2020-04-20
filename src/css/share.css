@@ -8,15 +8,10 @@
   font-weight: 700;
 }
 
-.share__body {
-  a {
-    text-decoration: none;
-  }
-}
-
 .share__item {
   display: inline-block;
   margin: 0.125rem;
+  text-decoration: none;
 
   svg {
     width: $icon_size;

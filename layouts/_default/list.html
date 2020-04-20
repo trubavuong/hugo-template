@@ -13,7 +13,7 @@
       <ul>
         {{ range . }}
           <li>
-            <h1><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h1>
+            <h2><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
             <time>{{ .Date.Format "Jan 2, 2006" }}</time>
           </li>
         {{ end }}

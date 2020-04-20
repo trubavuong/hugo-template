@@ -1,15 +1,21 @@
 {{ $global := .global }}
 {{ $taxonomy := .taxonomy }}
+{{ $prefix := .prefix }}
+{{ $suffix := .suffix }}
+{{ $delim := .delim }}
 {{ $useTermAsClass := .useTermAsClass }}
 {{ $terms := index $global.Params $taxonomy }}
 
 {{ with $terms }}
   <ul class="{{ $taxonomy }}">
-    {{ range . }}
-      {{ $params := (dict "global" $global "taxonomy" "tags" "term" . "property" "title") }}
+    {{ $len := len . }}
+    {{ $lastIndex := sub $len 1 }}
+
+    {{ range $index, $value := . }}
+      {{ $params := (dict "global" $global "taxonomy" "tags" "term" $value "property" "title") }}
       {{ $name := (partial "function/get_taxonomy_property.html" $params) }}
-      <li{{ if $useTermAsClass }} class="{{ . }}"{{ end }}>
-        <a href="{{ printf `/%s/%s/` ($taxonomy | urlize) (. | urlize) }}">{{ $name }}</a>
+      <li{{ if $useTermAsClass }} class="{{ $value }}"{{ end }}>
+        <a href="{{ printf `/%s/%s/` ($taxonomy | urlize) ($value | urlize) }}">{{ $prefix | default "" }}{{ $name }}{{ $suffix | default "" }}</a>{{ if lt $index $lastIndex }}{{ $delim | default "" }}{{ end }}
       </li>
     {{ end }}
   </ul>

@@ -1,6 +1,6 @@
 (function () {
-  function addCopyButtonToHighlightPanel(panel) {
-    var panelHeader = panel.querySelector(".highlight-panel__header");
+  function addCopyButtonToCodeblock(panel) {
+    var panelHeader = panel.querySelector(".codeblock__header");
     if (panelHeader) {
       var button = document.createElement("button");
       button.innerText = "Copy";
@@ -18,8 +18,8 @@
     }
   }
 
-  var panels = document.querySelectorAll('.highlight-panel');
+  var panels = document.querySelectorAll('.codeblock');
   for (var i = 0; i < panels.length; i += 1) {
-    addCopyButtonToHighlightPanel(panels[i]);
+    addCopyButtonToCodeblock(panels[i]);
   }
 })();

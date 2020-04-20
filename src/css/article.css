@@ -1,0 +1,60 @@
+.article__header {
+  text-align: center;
+
+  h1 {
+    margin: 1.5rem 0;
+  }
+}
+
+.article__header__meta {
+  > * + *,
+  .series li + li {
+    margin: 0.75rem auto;
+  }
+
+  .tags {
+    li {
+      display: inline;
+      margin: 0 0.125rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article__body {
+  > * + *,
+  blockquote > * + * {
+    margin-top: 1rem;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
+  }
+
+  h2,
+  h3 {
+    margin-top: 3rem;
+  }
+}
+
+.article__footer {
+  .share {
+    border: 1px solid $share_border;
+  }
+}

@@ -1,12 +1,20 @@
 {{ define "layout" }}
   <main>
-    <h1>{{ .Title }}</h1>
-    <div>{{ partial "taxonomies.html" (dict "global" . "taxonomy" "tags" "useTermAsClass" true) }}</div>
-    <div class="post-content">{{ .Content }}</div>
-    {{ partial "share.html" . }}
+    <article class="article">
+      <header class="article__header">
+        {{ if .Params.articleHeaderMeta }}
+          <div class="article__header__meta">
+            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ partial "taxonomies.html" (dict "global" . "taxonomy" "tags" "delim" ",") }}
+            {{ partial "taxonomies.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
+          </div>
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+      </header>
+      <div class="article__body">{{ .Content }}</div>
+      <footer class="article__footer">
+        {{ partial "share.html" . }}
+      </footer>
+    </article>
   </main>
-
-  <aside>
-    {{ .TableOfContents }}
-  </aside>
 {{ end }}

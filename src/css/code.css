@@ -1,4 +1,4 @@
-.highlight-panel__header {
+.codeblock__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 
   &,
   > button {
-    border: 1px solid $highlight_panel_header_border;
+    border: 1px solid $codeblock_header_border;
     background: transparent;
   }
 }

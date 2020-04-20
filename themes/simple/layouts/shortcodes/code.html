@@ -3,11 +3,11 @@
 {{ $options := .Get "options" }}
 {{ $inner := trim .Inner "\n\r" }}
 
-<div class="highlight-panel">
-  <div class="highlight-panel__header">
+<div class="codeblock">
+  <div class="codeblock__header">
     <span>{{ $title | default $lang }}</span>
   </div>
-  <div class="highlight-panel__body">
+  <div class="codeblock__body">
     {{ highlight $inner $lang $options }}
   </div>
 </div>

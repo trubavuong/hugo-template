@@ -5,6 +5,9 @@ tags:
   - js
   - html
   - css
+series:
+  - Go to my home
+  - Mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor
 authors:
   - name: Jack
     twitter: jack
@@ -35,6 +38,8 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
 1. Good
 2. Great
 3. Bad
+
+{{< toc >}}
 
 # New Features!
 

@@ -138,18 +138,20 @@ $pagination_active_text: $white;
 $pagination_active_background: $primary_600;
 $pagination_disabled_text: $gray_800;
 
-$highlight_panel_header_border: $gray_700;
-
 $code_text: $text_special_700;
 $code_background: $text_special_100;
+
+$codeblock_header_border: $gray_700;
+
+$blockquote_border: $gray_400;
 
 $link_text: $text_special_700;
 $link_border: $text_special_600;
 
-$blockquote_border: $gray_400;
-
 $table_border: $gray_500;
 $table_header_background: $gray_300;
+
+$share_border: $gray_600;
 
 $font_sans: "Fira Code", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -157,12 +159,14 @@ $font_size: 16px;
 $font_size_xs: 0.75rem;
 $font_size_sm: 0.875rem;
 $font_size_lg: 1.25rem;
-$font_size_h1: 2.5rem;
-$font_size_h2: 1.875rem;
 $font_size_h3: 1.325rem;
+$font_size_h2: 1.875rem;
+$font_size_h1: 2.5rem;
 
 $font_mono: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono",
   "Courier New", monospace;
 $font_mono_size: $font_size_sm;
 
 $icon_size: 36px;
+
+$body_width: 960px;
