@@ -3,7 +3,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": {{ .Site.Title | partial "function/stringify" }},
+      "name": {{ .Site.Title | partial "function/stringify.html" }},
       "url": "{{ .Site.BaseURL }}"
     }
   </script>

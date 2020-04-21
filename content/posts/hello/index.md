@@ -7,6 +7,10 @@ tags:
 images:
   - yeah.png
   - ./goal.png
+  - /root.png
+  - https://google.com/image.jpeg
+  - ../other.png
+  - ../nested/child.png
 series:
   - Journey to My Heart
   - Book my seat

@@ -7,29 +7,13 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 
-{{ with .Params.images }}
+{{ with (partial "function/get_page_images.html" .) }}
   <meta name="twitter:card" content="summary_large_image">
-  {{ range first 6 . }}
+  {{ range . }}
     <meta property="og:image" content="{{ . | absURL }}">
   {{ end }}
 {{ else }}
-  {{ $images := .Resources.ByType "image" }}
-  {{ $featured := $images.GetMatch "*feature*" }}
-  {{ if not $featured }}
-    {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
-  {{ end }}
-
-  {{ with $featured }}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="{{ $featured.Permalink }}">
-  {{ else }}
-    {{ with .Site.Params.images }}
-      <meta name="twitter:card" content="summary_large_image">
-      <meta property="og:image" content="{{ index . 0 | absURL }}">
-    {{ else }}
-      <meta name="twitter:card" content="summary">
-    {{ end }}
-  {{ end }}
+  <meta name="twitter:card" content="summary">
 {{ end }}
 
 {{ $iso8601 := "2006-01-02T15:04:05-07:00" }}

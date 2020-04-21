@@ -1,0 +1,27 @@
+{{ $result := slice }}
+
+{{ with .Params.images }}
+  {{ range . }}
+    {{ if or (hasPrefix . "/") (hasPrefix . "http") }}
+      {{ $result = $result | append . }}
+    {{ else }}
+      {{ $result = $result | append (path.Join $.RelPermalink .) }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ $featured := $images.GetMatch "*feature*" }}
+  {{ if not $featured }}
+    {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
+  {{ end }}
+
+  {{ with $featured }}
+    {{ $result = $result | append $featured.RelPermalink }}
+  {{ else }}
+    {{ with .Site.Params.images }}
+      {{ $result = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}
