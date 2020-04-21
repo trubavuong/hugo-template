@@ -124,6 +124,12 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 | Medium           | [plugins/medium/README.md][plme]          | Good   |
 | Google Analytics | [plugins/googleanalytics/README.md][plga] | Good   |
 
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[Neat]({{< ref "posts/hello.md" >}})
+
+[Who]({{< relref "notes/readme.md" >}})
+
 ### Development
 
 Want to contribute? Great!
