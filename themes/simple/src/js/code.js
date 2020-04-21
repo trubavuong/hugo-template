@@ -4,13 +4,16 @@
     if (panelHeader) {
       var button = document.createElement("button");
       button.innerText = "Copy";
-      button.title = "Copy to clipboard";
 
       addEvent(button, "click", function onclick() {
         var code = panel.querySelector("code[data-lang]");
         if (code) {
           copy(code.innerText);
+
           button.innerText = "Copied!";
+          setTimeout(function () {
+            button.innerText = "Copy";
+          }, 2000);
         }
       });
 
