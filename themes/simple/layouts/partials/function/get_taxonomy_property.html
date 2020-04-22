@@ -1,10 +1,10 @@
 {{ $result := .term }}
 
-{{ if .property }}
-  {{ $params := (dict "global" .global "taxonomy" .taxonomy "term" .term) }}
+{{ with $.property }}
+  {{ $params := (dict "global" $.global "taxonomy" $.taxonomy "term" $.term) }}
   {{ $properties := (partial "function/get_taxonomy_properties.html" $params) }}
   {{ if $properties }}
-    {{ $result = index $properties .property }}
+    {{ $result = index $properties . }}
   {{ end }}
 {{ end }}
 
