@@ -1,8 +1,8 @@
 {{ $result := "" }}
 
 {{ with $.global.Site.Params.taxonomies }}
-  {{ $taxonomies := index . $.taxonomy }}
-  {{ with $taxonomies }}
+  {{ $terms := index . $.taxonomy }}
+  {{ with $terms }}
     {{ $result = index . $.term }}
   {{ end }}
 {{ end }}

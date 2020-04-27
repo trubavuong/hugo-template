@@ -7,12 +7,12 @@
 
       button.innerText = "Copied!";
       setTimeout(function () {
-        button.innerText = "Copy URL";
+        button.innerText = "Copy Link";
       }, 2000);
     });
   }
 
-  var buttons = document.querySelectorAll('.copy-url');
+  var buttons = document.querySelectorAll('.copy-link');
   for (var i = 0; i < buttons.length; i += 1) {
     addCopyUrlFunctionToButton(buttons[i]);
   }

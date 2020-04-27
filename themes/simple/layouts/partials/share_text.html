@@ -34,7 +34,7 @@
     <span>Share on </span>
     {{- range $index, $value := $shares -}}
       {{- $delim := "" -}}
-      {{- if eq $index (sub $len 1) -}}
+      {{- if eq $index $lastIndex -}}
         {{- $delim = " or " -}}
       {{- else if gt $index 0 -}}
         {{- $delim = ", " -}}
@@ -57,7 +57,7 @@
       {{- else if eq $value "whatsapp" -}}
         {{- $delim -}} <a href="whatsapp://send?text={{ $title }} - {{ $url }}" rel="nofollow noopener noreferrer" target="_blank">WhatsApp</a>
       {{- else if eq $value "copy" -}}
-        {{- $delim -}} <a href="#" rel="nofollow" class="copy-url">Copy URL</a>
+        {{- $delim -}} <a href="#" rel="nofollow" class="copy-link">Copy Link</a>
       {{- else if eq $value "email" -}}
         {{- $delim -}} <a href="mailto:?subject={{ $title }}&body={{ $url }}" rel="nofollow noopener noreferrer" target="_blank">Email</a>
       {{- end -}}

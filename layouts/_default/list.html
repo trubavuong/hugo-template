@@ -1,25 +1,29 @@
 {{ define "layout" }}
   <main>
-    <h1>
-      {{- if eq .Kind "taxonomy" -}}
-        {{- .Data.Singular | title -}}
-        {{- printf ": " -}}
-      {{- end -}}
+    <div class="container">
+      <h1>
+        {{- if eq .Kind "taxonomy" -}}
+          {{- .Data.Singular | title -}}
+          {{- printf ": " -}}
+        {{- end -}}
 
-      {{- .Title -}}
-    </h1>
+        {{- .Title -}}
+      </h1>
 
-    {{ with .Paginator.Pages }}
-      <ul>
-        {{ range . }}
-          <li>
-            <h2><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
-            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-          </li>
-        {{ end }}
-      </ul>
-    {{ end }}
+      {{ with .Paginator.Pages }}
+        <ul>
+          {{ range . }}
+            <li>
+              <h2><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
 
-    {{ partial "pagination.html" . }}
+      {{ partial "pagination.html" . }}
+    </div>
   </main>
+
+  {{ partial "extended/footer.html" . }}
 {{ end }}

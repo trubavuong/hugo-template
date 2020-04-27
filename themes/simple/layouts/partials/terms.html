@@ -1,4 +1,11 @@
-{{ $terms := index $.global.Params $.taxonomy }}
+{{ $terms := slice }}
+{{ if $.all }}
+  {{ range (index $.global.Site.Taxonomies $.taxonomy).Alphabetical }}
+    {{ $terms = $terms | append .Name }}
+  {{ end }}
+{{ else }}
+  {{ $terms = index $.global.Params $.taxonomy }}
+{{ end }}
 
 {{ with $terms }}
   <ul class="{{ $.taxonomy }}">
@@ -7,7 +14,7 @@
 
     {{ range $index, $value := . }}
       {{ $params := (dict "global" $.global "taxonomy" "tags" "term" $value "property" "title") }}
-      {{ $name := (partial "function/get_taxonomy_property.html" $params) }}
+      {{ $name := (partial "function/get_term_property.html" $params) }}
       <li{{ if $.useTermAsClass }} class="{{ $value }}"{{ end }}>
         <a href="{{ printf `/%s/%s/` ($.taxonomy | urlize) ($value | urlize) }}">{{ $.prefix | default "" }}{{ $name }}{{ $.suffix | default "" }}</a>{{ if lt $index $lastIndex }}{{ $.delim | default "" }}{{ end }}
       </li>

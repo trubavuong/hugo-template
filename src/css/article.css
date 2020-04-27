@@ -9,26 +9,7 @@
 .article__header__meta {
   > * + *,
   .series li + li {
-    margin: 0.75rem auto;
-  }
-
-  .tags {
-    li {
-      display: inline;
-      margin: 0 0.125rem;
-    }
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    margin-top: 0.75rem;
   }
 }
 
@@ -36,10 +17,6 @@
   > * + *,
   blockquote > * + * {
     margin-top: 1rem;
-  }
-
-  li + li {
-    margin-top: 0.25rem;
   }
 
   table {
@@ -50,6 +27,19 @@
   h2,
   h3 {
     margin-top: 3rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul,
+  ol {
+    margin-left: 2.5rem;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
   }
 }
 

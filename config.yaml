@@ -33,6 +33,17 @@ privacy:
   youtube:
     privacyEnhanced: true
 
+menu:
+  footer:
+    - name: about me
+      pre: ">"
+      post: "<"
+      url: /about/
+    - name: projects
+      url: /projects/
+    - name: blog
+      url: /posts/
+
 params:
   titleDelim: "|"
 

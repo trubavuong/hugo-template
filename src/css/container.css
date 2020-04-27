@@ -1,0 +1,25 @@
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: $body_width;
+}
+
+body {
+  > footer {
+    margin-top: 3rem;
+    text-align: center;
+
+    .container {
+      > * + * {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .footer-nav {
+      li {
+        display: inline-block;
+        margin: 0.25rem 0.75rem;
+      }
+    }
+  }
+}
