@@ -62,7 +62,7 @@
             {{ partial "svg/brands/whatsapp-square.svg" }}
           </a>
         {{ else if eq . "copy" }}
-          <a href="#" onclick="copy('{{ $url }}');return false;" rel="nofollow" class="share__item">
+          <a href="#" rel="nofollow" class="share__item copy-link">
             {{ partial "svg/solid/clipboard.svg" }}
           </a>
         {{ else if eq . "email" }}

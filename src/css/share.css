@@ -15,7 +15,6 @@
 
   svg {
     width: $icon_size;
-    height: $icon_size;
     transition: all 0.2s ease-in-out;
   }
 

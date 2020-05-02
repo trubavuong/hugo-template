@@ -5,6 +5,19 @@
 }
 
 body {
+  > header {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: $icon_size;
+    }
+  }
+
   > footer {
     margin-top: 3rem;
     text-align: center;
