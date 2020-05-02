@@ -147,6 +147,7 @@ $blockquote_border: $gray_400;
 $blockquote_background: $gray_100;
 
 $link_text: $text_special_700;
+$link_hover_text: $white;
 
 $table_border: $gray_500;
 $table_header_background: $gray_300;

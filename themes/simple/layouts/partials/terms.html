@@ -8,7 +8,7 @@
 {{ end }}
 
 {{ with $terms }}
-  <ul class="{{ $.taxonomy }}">
+  <ul class="{{ $.taxonomy }}{{ with $.class }} {{ . }}{{ end }}">
     {{ $len := len . }}
     {{ $lastIndex := sub $len 1 }}
 

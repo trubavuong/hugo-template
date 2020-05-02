@@ -70,6 +70,7 @@ img,
 video {
   height: auto;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 iframe {
@@ -136,4 +137,11 @@ figcaption {
 
 a {
   color: $link_text;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 95%, $link_text 0);
+
+  &:hover {
+    color: $link_hover_text;
+    background-image: linear-gradient(180deg, transparent, $link_text 0);
+  }
 }
