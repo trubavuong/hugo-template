@@ -85,7 +85,7 @@ table {
 
 td,
 th {
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   border: 1px solid $table_border;
 }
 
@@ -103,7 +103,7 @@ button {
 }
 
 blockquote {
-  padding: 0.75rem;
+  padding: 1rem;
   border-left: 0.375rem solid $blockquote_border;
   background: $blockquote_background;
 }

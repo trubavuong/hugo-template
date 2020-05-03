@@ -1,9 +1,4 @@
 .tags {
-  li {
-    display: inline-block;
-    margin: 0.25rem 0.75rem;
-  }
-
   a {
     &::before {
       content: "\2713";

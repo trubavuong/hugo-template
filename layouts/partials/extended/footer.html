@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
-    {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "all" true) }}
-    {{ partial "menu.html" (dict "global" . "menu" "footer" "class" "footer-nav") }}
+    {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list" "all" true) }}
+    {{ partial "menu.html" (dict "global" . "menu" "footer" "class" "inline-list") }}
     <div>
       <p>&copy; 2020{{ with .Site.Params.author }} {{ .name }}{{ end }}. <a href="http://creativecommons.org/licenses/by/4.0/">Some Rights Reserved</a>.</p>
     </div>

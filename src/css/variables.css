@@ -101,25 +101,15 @@ $pink_700: #b83280;
 $pink_800: #97266d;
 $pink_900: #702459;
 
-$primary_100: $green_100;
-$primary_200: $green_200;
-$primary_300: $green_300;
-$primary_400: $green_400;
-$primary_500: $green_500;
-$primary_600: $green_600;
-$primary_700: $green_700;
-$primary_800: $green_800;
-$primary_900: $green_900;
-
-$secondary_100: $blue_100;
-$secondary_200: $blue_200;
-$secondary_300: $blue_300;
-$secondary_400: $blue_400;
-$secondary_500: $blue_500;
-$secondary_600: $blue_600;
-$secondary_700: $blue_700;
-$secondary_800: $blue_800;
-$secondary_900: $blue_900;
+$primary_100: $blue_100;
+$primary_200: $blue_200;
+$primary_300: $blue_300;
+$primary_400: $blue_400;
+$primary_500: $blue_500;
+$primary_600: $blue_600;
+$primary_700: $blue_700;
+$primary_800: $blue_800;
+$primary_900: $blue_900;
 
 $text_special_100: $red_100;
 $text_special_200: $red_200;
