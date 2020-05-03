@@ -8,7 +8,7 @@
     "dev": "hugo server --minify"
   },
   "x": {
-    "js": "themes/simple/src/js/event.js themes/simple/src/js/clipboard.js themes/simple/src/js/code.js themes/simple/src/js/share_text.js themes/simple/src/js/theme.js",
+    "js": "themes/simple/src/js/event.js themes/simple/src/js/clipboard.js src/js/code.js src/js/share_text.js src/js/theme.js",
     "css": "src/css/index.css"
   },
   "devDependencies": {
