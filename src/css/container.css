@@ -16,6 +16,12 @@ body {
     .logo {
       width: $icon_size;
     }
+
+    .nav {
+      > * + * {
+        margin-left: 1rem;
+      }
+    }
   }
 
   > footer {

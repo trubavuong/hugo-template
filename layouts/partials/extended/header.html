@@ -5,10 +5,14 @@
         <img src="/apple-touch-icon.png" alt="logo">
       </a>
     </div>
-    <div>
-      {{ if and .Site.Params.search (ne .RelPermalink "/search/") }}
+    <div class="nav">
+      {{- if and .Site.Params.theme -}}
+        <a href="#" rel="nofollow" class="theme-toggler">Theme</a>
+      {{- end -}}
+
+      {{- if and .Site.Params.search (ne .RelPermalink "/search/") -}}
         <a href="#" rel="nofollow" class="search-opener">Search</a>
-      {{ end }}
+      {{- end -}}
     </div>
   </div>
 </header>

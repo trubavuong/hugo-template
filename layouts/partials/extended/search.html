@@ -2,9 +2,9 @@
   <div id="search__header">
     <input type="text" placeholder="Search articles..." id="search__input">
     <a href="#" id="search__clear">Clear</a>
-    {{ if ne .RelPermalink "/search/" }}
+    {{- if ne .RelPermalink "/search/" -}}
       <a href="#" id="search__close">Close</a>
-    {{ end }}
+    {{- end -}}
   </div>
   <h3>Search Results</h3>
   <div id="search__results"></div>

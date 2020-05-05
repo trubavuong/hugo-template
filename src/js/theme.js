@@ -3,6 +3,14 @@ if (window.localStorage) {
     var themeName = "dark";
     var themeKey = "darkTheme";
     var regex = /(^|\s)dark(\s|$)/;
+    var togglers = document.querySelectorAll(".theme-toggler");
+
+    function setThemeTextToTogglers(theme) {
+      var text = "&rarr; " + (theme > 0 ? "Light" : "Dark");
+      for (var i = 0; i < togglers.length; i += 1) {
+        togglers[i].innerHTML = text;
+      }
+    }
 
     function loadTheme() {
       var className = document.body.className;
@@ -16,6 +24,8 @@ if (window.localStorage) {
       else if (hasThemeInClass) {
         document.body.className = className.replace(regex, "");
       }
+
+      setThemeTextToTogglers(theme);
     }
 
     function toggleTheme(e) {
@@ -27,9 +37,8 @@ if (window.localStorage) {
       loadTheme();
     }
 
-    var elements = document.querySelectorAll(".theme-toggler");
-    for (var i = 0; i < elements.length; i += 1) {
-      addEvent(elements[i], "click", toggleTheme);
+    for (var i = 0; i < togglers.length; i += 1) {
+      addEvent(togglers[i], "click", toggleTheme);
     }
 
     loadTheme();
