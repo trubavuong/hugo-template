@@ -121,17 +121,17 @@ $text_special_700: $red_700;
 $text_special_800: $red_800;
 $text_special_900: $red_900;
 
-$pagination_text: $primary_600;
-$pagination_border: $primary_600;
+$pagination_text: $text_special_600;
 $pagination_background: $white;
 $pagination_active_text: $white;
-$pagination_active_background: $primary_600;
-$pagination_disabled_text: $gray_800;
+$pagination_active_background: $text_special_600;
 
 $code_text: $text_special_700;
 $code_background: $text_special_100;
 
-$codeblock_header_border: $gray_700;
+$codeblock_header_text: $white;
+$codeblock_header_background: $gray_700;
+$codeblock_header_button_border: $gray_600;
 
 $blockquote_border: $gray_400;
 $blockquote_background: $gray_100;
@@ -143,6 +143,10 @@ $table_border: $gray_500;
 $table_header_background: $gray_300;
 
 $share_border: $gray_500;
+
+$body_text: $black;
+$body_background: $white;
+$body_width: 960px;
 
 $font_sans: "Fira Code", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -159,5 +163,3 @@ $font_mono: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono",
 $font_mono_size: $font_size_sm;
 
 $icon_size: 36px;
-
-$body_width: 960px;

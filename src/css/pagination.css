@@ -5,19 +5,13 @@
 .pagination__item {
   a {
     padding: 0.5rem 1rem;
-    border: 1px solid $pagination_border;
     color: $pagination_text;
     background: $pagination_background;
   }
 
   a:hover,
   &.pagination__item--active a {
-    border-color: transparent;
     color: $pagination_active_text;
     background: $pagination_active_background;
-  }
-
-  &.pagination__item--disabled {
-    color: $pagination_disabled_text;
   }
 }

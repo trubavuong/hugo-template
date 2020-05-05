@@ -1,0 +1,14 @@
+.dark {
+  .pagination__item {
+    a {
+      color: $pagination_text;
+      background: $pagination_background;
+    }
+
+    a:hover,
+    &.pagination__item--active a {
+      color: $pagination_active_text;
+      background: $pagination_active_background;
+    }
+  }
+}

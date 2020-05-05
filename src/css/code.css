@@ -11,9 +11,14 @@
     max-width: 100%;
   }
 
+  > button {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid $codeblock_header_button_border;
+  }
+
   &,
   > button {
-    border: 1px solid $codeblock_header_border;
-    background: transparent;
+    color: $codeblock_header_text;
+    background: $codeblock_header_background;
   }
 }

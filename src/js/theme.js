@@ -13,16 +13,16 @@ if (window.localStorage) {
     }
 
     function loadTheme() {
-      var className = document.body.className;
+      var className = document.documentElement.className;
       var hasThemeInClass = regex.test(className);
       var theme = localStorage.getItem(themeKey);
       if (theme > 0) {
         if (!hasThemeInClass) {
-          document.body.className += (className && " ") + themeName;
+          document.documentElement.className += (className && " ") + themeName;
         }
       }
       else if (hasThemeInClass) {
-        document.body.className = className.replace(regex, "");
+        document.documentElement.className = className.replace(regex, "");
       }
 
       setThemeTextToTogglers(theme);

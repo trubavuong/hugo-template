@@ -8,3 +8,5 @@
 @import "./code.css";
 @import "./list.css";
 @import "./search.css";
+
+@import "./theme-dark/index.css";

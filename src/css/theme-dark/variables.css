@@ -1,0 +1,45 @@
+$primary_100: $blue_100;
+$primary_200: $blue_200;
+$primary_300: $blue_300;
+$primary_400: $blue_400;
+$primary_500: $blue_500;
+$primary_600: $blue_600;
+$primary_700: $blue_700;
+$primary_800: $blue_800;
+$primary_900: $blue_900;
+
+$text_special_100: $green_100;
+$text_special_200: $green_200;
+$text_special_300: $green_300;
+$text_special_400: $green_400;
+$text_special_500: $green_500;
+$text_special_600: $green_600;
+$text_special_700: $green_700;
+$text_special_800: $green_800;
+$text_special_900: $green_900;
+
+$pagination_text: $white;
+$pagination_background: $text_special_600;
+$pagination_active_text: $text_special_600;
+$pagination_active_background: $white;
+
+$code_text: $white;
+$code_background: $text_special_700;
+
+$codeblock_header_text: $white;
+$codeblock_header_background: $gray_700;
+$codeblock_header_button_border: $gray_600;
+
+$blockquote_border: $gray_400;
+$blockquote_background: $gray_700;
+
+$link_text: $text_special_600;
+$link_hover_text: $white;
+
+$table_border: $gray_500;
+$table_header_background: $gray_700;
+
+$share_border: $gray_500;
+
+$body_text: $white;
+$body_background: #35363a;
