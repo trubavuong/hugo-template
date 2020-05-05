@@ -83,7 +83,7 @@
       var result = results[i].item;
       html += "<li><div><h3><a href=\"" + result.url + "\">" + result.title + "</a></h3><p>" + result.description + "</p></div></li>";
     }
-    html = (html ? "<ul>" + html + "</ul>" : (text ? "<p>No results.</p>" : ""));
+    html = (html ? "<ul>" + html + "</ul>" : "<p>Not found.</p>");
 
     searchResultsElement.innerHTML = html;
   }
