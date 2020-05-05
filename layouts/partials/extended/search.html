@@ -1,0 +1,10 @@
+<div id="search"{{ if ne .RelPermalink "/search/" }} style="display:none;"{{ end }}>
+  <div id="search__header">
+    <input type="text" placeholder="Search posts..." id="search__input">
+    <a href="#" id="search__clear">Clear</a>
+    {{ if ne .RelPermalink "/search/" }}
+      <a href="#" id="search__close">Close</a>
+    {{ end }}
+  </div>
+  <div id="search__results"></div>
+</div>

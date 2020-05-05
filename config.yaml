@@ -88,3 +88,5 @@ params:
 
   share:
     - twitter
+
+  search: true

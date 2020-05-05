@@ -1,5 +1,5 @@
 (function () {
-  function addCopyUrlFunctionToButton(button) {
+  function addCopyLinkFunctionToButton(button) {
     addEvent(button, "click", function onclick(e) {
       e.preventDefault();
 
@@ -12,8 +12,8 @@
     });
   }
 
-  var buttons = document.querySelectorAll('.copy-link');
+  var buttons = document.querySelectorAll(".copy-link");
   for (var i = 0; i < buttons.length; i += 1) {
-    addCopyUrlFunctionToButton(buttons[i]);
+    addCopyLinkFunctionToButton(buttons[i]);
   }
 })();

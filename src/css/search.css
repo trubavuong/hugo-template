@@ -1,0 +1,14 @@
+#search__header {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: $font_size_sm;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+#search__input {
+  flex-grow: 1;
+}

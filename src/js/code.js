@@ -21,7 +21,7 @@
     }
   }
 
-  var panels = document.querySelectorAll('.codeblock');
+  var panels = document.querySelectorAll(".codeblock");
   for (var i = 0; i < panels.length; i += 1) {
     addCopyButtonToCodeblock(panels[i]);
   }

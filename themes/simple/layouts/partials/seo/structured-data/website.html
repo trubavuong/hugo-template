@@ -4,6 +4,13 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": {{ .Site.Title | partial "function/stringify.html" }},
+      {{ if .Site.Params.search }}
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{ .Site.BaseURL }}search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+      {{ end }}
       "url": "{{ .Site.BaseURL }}"
     }
   </script>

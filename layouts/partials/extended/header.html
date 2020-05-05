@@ -6,7 +6,9 @@
       </a>
     </div>
     <div>
-      <a href="#" rel="nofollow" class="search">Search</a>
+      {{ if and .Site.Params.search (ne .RelPermalink "/search/") }}
+        <a href="#" rel="nofollow" class="search-opener">Search</a>
+      {{ end }}
     </div>
   </div>
 </header>

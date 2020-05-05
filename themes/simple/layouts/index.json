@@ -5,6 +5,4 @@
   {{ $pages = $pages | append $item }}
 {{ end }}
 
-{{ $response := dict "baseUrl" .Site.BaseURL "pages" $pages }}
-
-{{ $response | jsonify }}
+{{ $pages | jsonify }}
