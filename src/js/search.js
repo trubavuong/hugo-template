@@ -8,6 +8,7 @@
   var searchResultsElement = document.querySelector("#search__results");
   var searchCompanyElements = document.querySelectorAll(".search-company");
   var isLoadSearchIndexes = false;
+  var limit = 50;
 
   function isSearchPage() {
     return location.pathname === "/search/";
@@ -78,7 +79,7 @@
     }
 
     var html = "";
-    for (var i = 0; i < results.length; i += 1) {
+    for (var i = 0; i < Math.min(results.length, limit); i += 1) {
       var result = results[i].item;
       html += "<li><div><h3><a href=\"" + result.url + "\">" + result.title + "</a></h3><p>" + result.description + "</p></div></li>";
     }
