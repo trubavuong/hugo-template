@@ -63,13 +63,6 @@ params:
     spanMiddleRight: 2
     spanEnd: 0
 
-  taxonomies:
-    tags:
-      js:
-        title: JavaScript
-      html:
-        title: HTML
-
   css:
     - /static/modal.min.css
     - /popup.min.css

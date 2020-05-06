@@ -13,10 +13,16 @@
     {{ $lastIndex := sub $len 1 }}
 
     {{ range $index, $value := . }}
-      {{ $params := (dict "global" $.global "taxonomy" "tags" "term" $value "property" "title") }}
-      {{ $name := (partial "function/get_term_property.html" $params) }}
-      <li{{ if $.useTermAsClass }} class="{{ $value }}"{{ end }}>
-        <a href="{{ printf `/%s/%s/` ($.taxonomy | urlize) ($value | urlize) }}">{{ $.prefix | default "" }}{{ $name }}{{ $.suffix | default "" }}</a>{{ if lt $index $lastIndex }}{{ $.delim | default "" }}{{ end }}
+      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($.taxonomy | urlize) ($value | urlize)) }}
+      {{ $url := (printf "%s/" $urlWithoutTrailingSlash) }}
+
+      {{ $name := $value }}
+      {{ with ($.global.Site.GetPage $urlWithoutTrailingSlash) }}
+        {{ $name = .Title }}
+      {{ end }}
+
+      <li>
+        <a href="{{ $url }}">{{ $.prefix | default "" }}{{ $name }}{{ $.suffix | default "" }}</a>
       </li>
     {{ end }}
   </ul>
