@@ -51,3 +51,16 @@
     text-align: center;
   }
 }
+
+.article-summary {
+  margin: 2rem 0;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .tags {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}

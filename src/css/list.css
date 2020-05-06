@@ -1,6 +1,9 @@
 .inline-list {
   li {
     display: inline-block;
-    margin: 0.25rem 0.75rem;
+  }
+
+  li + li {
+    margin-left: 1rem;
   }
 }

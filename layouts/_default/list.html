@@ -16,10 +16,7 @@
         {{ with .Paginator.Pages }}
           <ul>
             {{ range . }}
-              <li>
-                <h2><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
-                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-              </li>
+              <li>{{ .Render "summary" }}</li>
             {{ end }}
           </ul>
         {{ end }}

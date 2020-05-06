@@ -4,7 +4,7 @@
   }
 
   blockquote {
-    border-left: 0.375rem solid $blockquote_border;
+    border-left-color: $blockquote_border;
     background: $blockquote_background;
   }
 
@@ -15,7 +15,7 @@
 
   a {
     color: $link_text;
-    border-bottom: 1px solid $link_text;
+    border-bottom-color: $link_text;
 
     &:hover {
       color: $link_hover_text;

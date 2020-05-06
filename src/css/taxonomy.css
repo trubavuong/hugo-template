@@ -1,7 +1,7 @@
 .tags {
   a {
     &::before {
-      content: "\2713";
+      content: "#";
     }
   }
 }

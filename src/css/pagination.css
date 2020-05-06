@@ -1,9 +1,11 @@
 .pagination {
+  margin: 3rem 0;
   text-align: center;
 }
 
 .pagination__item {
   a {
+    display: inline-block;
     padding: 0.5rem 1rem;
     color: $pagination_text;
     background: $pagination_background;
