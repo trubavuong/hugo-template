@@ -1,12 +1,23 @@
 <article class="article-summary">
   <header>
     <h3><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h3>
+
+    {{ if eq .Kind "taxonomy" }}
+      {{ $len := len .Data.Pages }}
+      <div>{{ $len }} article{{ if gt $len 1 }}s{{ end }}</div>
+    {{ end }}
   </header>
-  <section>
-    <p>{{ partial `function/get_page_description.html` . }}</p>
-  </section>
-  <footer>
-    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-    {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
-  </footer>
+
+  {{ with (partial `function/get_page_description.html` .) }}
+    <section>
+      <p>{{ . }}</p>
+    </section>
+  {{ end }}
+
+  {{ if .IsPage }}
+    <footer>
+      <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+      {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
+    </footer>
+  {{ end }}
 </article>

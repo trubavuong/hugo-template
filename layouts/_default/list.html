@@ -13,6 +13,10 @@
           {{- .Title -}}
         </h1>
 
+        {{ with (partial `function/get_page_description.html` .) }}
+          <p>{{ . }}</p>
+        {{ end }}
+
         {{ with .Paginator.Pages }}
           <ul>
             {{ range . }}

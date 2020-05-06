@@ -7,9 +7,12 @@
         {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
       </div>
     {{ end }}
+
     <h1>{{ .Title }}</h1>
   </header>
+
   <section class="article__body">{{ .Content }}</section>
+
   <footer class="article__footer">
     {{ partial "share_text.html" . }}
   </footer>
