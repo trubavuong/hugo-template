@@ -1,8 +1,7 @@
 if (window.localStorage) {
   (function () {
-    var themeName = "dark";
     var themeKey = "darkTheme";
-    var regex = /(^|\s)dark(\s|$)/;
+    var themeClassName = "dark";
     var togglers = document.querySelectorAll(".theme-toggler");
 
     function setThemeTextToTogglers(theme) {
@@ -13,16 +12,13 @@ if (window.localStorage) {
     }
 
     function loadTheme() {
-      var className = document.documentElement.className;
-      var hasThemeInClass = regex.test(className);
+      var element = document.documentElement;
       var theme = localStorage.getItem(themeKey);
       if (theme > 0) {
-        if (!hasThemeInClass) {
-          document.documentElement.className += (className && " ") + themeName;
-        }
+        addClass(element, themeClassName);
       }
-      else if (hasThemeInClass) {
-        document.documentElement.className = className.replace(regex, "");
+      else {
+        removeClass(element, themeClassName);
       }
 
       setThemeTextToTogglers(theme);

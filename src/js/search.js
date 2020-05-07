@@ -49,7 +49,7 @@
     for (var i = 0; i < terms.length; i += 1) {
       var term = terms[i];
       if (term) {
-        regexes.push(new RegExp("\\b" + term.replace(/[-[\]{}()*+?.,\\^$|#]/g, "\\$&"), "ig"));
+        regexes.push(new RegExp("\\b" + reEscape(term), "ig"));
       }
     }
 
