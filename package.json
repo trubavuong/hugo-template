@@ -4,7 +4,7 @@
   "scripts": {
     "build-js": "uglifyjs $npm_package_x_js --compress --mangle --output assets/bundle.min.js",
     "build-css": "postcss $npm_package_x_css --no-map --output assets/bundle.min.css",
-    "build-assets": "npm run build-js && npm run build-css",
+    "build": "npm run build-js && npm run build-css",
     "dev": "hugo server --disableFastRender --minify"
   },
   "x": {

@@ -88,3 +88,10 @@ params:
     placeholder: Search Articles...
 
   paginate: 1
+
+  latest:
+    articles:
+      limit: 3
+      section: posts
+      title: Latest Articles XXX
+      moreArticles: More Articles XXX &rarr;

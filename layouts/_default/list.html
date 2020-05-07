@@ -14,8 +14,12 @@
         {{ $order := .Param "order" }}
         {{ if eq $order "ByDate" }}
           {{ $pages = .Pages.ByDate }}
+        {{ else if eq $order "ByDateReverse" }}
+          {{ $pages = .Pages.ByDate.Reverse }}
         {{ else if eq $order "ByTitle" }}
           {{ $pages = .Pages.ByTitle }}
+        {{ else if eq $order "ByTitleReverse" }}
+          {{ $pages = .Pages.ByTitle.Reverse }}
         {{ end }}
 
         {{ $paginate := .Param "paginate" }}
