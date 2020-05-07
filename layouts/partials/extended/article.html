@@ -1,12 +1,10 @@
 <article class="article">
   <header class="article__header">
-    {{ if .Params.articleHeaderMeta }}
-      <div class="article__header__meta">
-        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-        {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
-        {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
-      </div>
-    {{ end }}
+    <div class="article__header__meta">
+      <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+      {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
+      {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
+    </div>
 
     <h1>{{ .Title }}</h1>
   </header>
