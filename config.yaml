@@ -2,7 +2,6 @@ baseURL: http://example.org/
 languageCode: en
 title: My New "Hugo Site"
 theme: simple
-paginate: 1
 googleAnalytics: UA-123456
 enableRobotsTXT: true
 
@@ -85,3 +84,5 @@ params:
   theme: true
 
   search: true
+
+  paginate: 1

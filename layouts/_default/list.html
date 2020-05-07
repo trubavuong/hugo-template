@@ -4,20 +4,24 @@
   <main>
     <div class="container">
       <div class="search-company">
-        <h1>
-          {{- if eq .Kind "taxonomy" -}}
-            {{- .Data.Singular | title -}}
-            {{- printf ": " -}}
-          {{- end -}}
-
-          {{- .Title -}}
-        </h1>
+        <h1>{{ partial `function/get_page_title.html` . }}</h1>
 
         {{ with (partial `function/get_page_description.html` .) }}
           <p>{{ . }}</p>
         {{ end }}
 
-        {{ with .Paginator.Pages }}
+        {{ $pages := .Pages }}
+        {{ $order := .Param "order" }}
+        {{ if eq $order "ByDate" }}
+          {{ $pages = .Pages.ByDate }}
+        {{ else if eq $order "ByTitle" }}
+          {{ $pages = .Pages.ByTitle }}
+        {{ end }}
+
+        {{ $paginate := .Param "paginate" }}
+        {{ $paginator := .Paginate $pages $paginate }}
+
+        {{ with $paginator.Pages }}
           <ul>
             {{ range . }}
               <li>{{ .Render "summary" }}</li>

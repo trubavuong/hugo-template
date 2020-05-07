@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    <title>{{ block "title" . }}{{ if .IsPage }}{{ .Title }} {{ .Site.Params.titleDelim | default "|" }} {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if not .IsHome }}{{ partial `function/get_page_title.html` . }} {{ .Site.Params.titleDelim | default "|" }} {{ end }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "seo/index.html" . }}
     {{ partial "favicon.html" . }}
     {{ partial "css.html" . }}

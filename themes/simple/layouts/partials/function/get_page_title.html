@@ -1,0 +1,7 @@
+{{ $result := .Title }}
+
+{{ if eq .Kind "taxonomy" }}
+  {{ $result = (printf "%s: %s" (.Data.Singular | title) .Title) }}
+{{ end }}
+
+{{ return $result }}
