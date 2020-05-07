@@ -10,7 +10,7 @@
         <a href="#" rel="nofollow" class="theme-toggler">Theme</a>
       {{- end -}}
 
-      {{- if and .Site.Params.search (ne .RelPermalink "/search/") -}}
+      {{- if .Param "search.enable" -}}
         <a href="#" rel="nofollow" class="search-opener">Search</a>
       {{- end -}}
     </div>

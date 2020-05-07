@@ -7,12 +7,9 @@
   var searchInputElement = document.querySelector("#search__input");
   var searchResultsElement = document.querySelector("#search__results");
   var searchCompanyElements = document.querySelectorAll(".search-company");
-  var isLoadSearchIndexes = false;
   var limit = 50;
-
-  function isSearchPage() {
-    return location.pathname === "/search/";
-  }
+  var isLoadSearchIndexes = false;
+  var isSearchPage = (location.pathname === "/search/");
 
   function getScoreByTerm(regex, keys, index) {
     var score = 0;
@@ -70,7 +67,7 @@
     var results = [];
     var text = (searchInputElement.value || "");
 
-    if (isSearchPage() && history && history.pushState) {
+    if (isSearchPage && history && history.pushState) {
       history.pushState(null, "", "/search/?q=" + encodeURIComponent(text));
     }
 
@@ -154,8 +151,11 @@
     addEvent(searchOpenElements[i], "click", openSearchPanel);
   }
 
-  if (isSearchPage()) {
+  if (searchElement.style.display !== "none") {
     loadSearchIndexes();
+  }
+
+  if (isSearchPage) {
     dumpQueryToSearchInputValue();
   }
 })();
