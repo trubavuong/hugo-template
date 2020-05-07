@@ -4,11 +4,11 @@
     {{ $pages := .Pages }}
     {{ if eq $.order "ByDate" }}
       {{ $pages = .Pages.ByDate }}
-    {{ else if eq $.order "ByDateReverse" }}
+    {{ else if eq $.order "ByDate.Reverse" }}
       {{ $pages = .Pages.ByDate.Reverse }}
     {{ else if eq $.order "ByTitle" }}
       {{ $pages = .Pages.ByTitle }}
-    {{ else if eq $.order "ByTitleReverse" }}
+    {{ else if eq $.order "ByTitle.Reverse" }}
       {{ $pages = .Pages.ByTitle.Reverse }}
     {{ end }}
 

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="search-company">
         <section>
-          {{ partial `latest_section_articles.html` (dict "global" . "params" .Site.Params.latest.articles) }}
+          {{ partial `section_pages.html` (dict "global" . "section" "/posts/" "order" "ByDate.Reverse" "limit" 5 "title" "Latest Articles XXX" "morePagesText" "More Articles XXX &rarr;") }}
         </section>
       </div>
 

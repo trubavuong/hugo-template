@@ -1,0 +1,24 @@
+{{ $pages := $.global.Site.RegularPages }}
+{{ if eq $.order "ByDate" }}
+  {{ $pages = $.global.Site.RegularPages.ByDate }}
+{{ else if eq $.order "ByDate.Reverse" }}
+  {{ $pages = $.global.Site.RegularPages.ByDate.Reverse }}
+{{ else if eq $.order "ByTitle" }}
+  {{ $pages = $.global.Site.RegularPages.ByTitle }}
+{{ else if eq $.order "ByTitle.Reverse" }}
+  {{ $pages = $.global.Site.RegularPages.ByTitle.Reverse }}
+{{ end }}
+
+{{ with (where $pages "Parent.RelPermalink" $.section) }}
+  <h2>{{ $.title }}</h2>
+  <ul>
+    {{ range first $.limit . }}
+      <li>{{ .Render "summary" }}</li>
+    {{ end }}
+  </ul>
+
+  {{ if gt (len .) $.limit }}
+    <a href="{{ $.section }}">{{ $.morePagesText | safeHTML }}</a>
+  {{ end }}
+{{ end }}
+
