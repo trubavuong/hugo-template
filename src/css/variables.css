@@ -142,7 +142,7 @@ $link_hover_text: $white;
 $table_border: $gray_500;
 $table_header_background: $gray_300;
 
-$share_border: $gray_500;
+$share_background: $gray_300;
 
 $body_text: $black;
 $body_background: $white;

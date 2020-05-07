@@ -1,0 +1,7 @@
+.dark {
+  .article {
+    .share {
+      background: $share_background;
+    }
+  }
+}
