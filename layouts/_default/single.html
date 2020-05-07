@@ -5,6 +5,8 @@
     <div class="container">
       <div class="search-company">
         {{ partial "extended/article.html" . }}
+
+        {{ partial "taxonomy_pages.html" (dict "global" . "taxonomy" "series" "order" "ByDate" "limit" 1e9) }}
       </div>
 
       {{ partial "search.html" . }}

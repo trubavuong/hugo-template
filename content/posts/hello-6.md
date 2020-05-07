@@ -13,6 +13,8 @@ authors:
     twitter: bob
     facebook: bob
 draft: false
+series:
+  - Go to my home
 ---
 
 Yesterday!

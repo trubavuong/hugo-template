@@ -1,6 +1,6 @@
 ---
 title: Series
-paginate: 10
+paginate: 1e0
 order: ByTitle
 
 cascade:

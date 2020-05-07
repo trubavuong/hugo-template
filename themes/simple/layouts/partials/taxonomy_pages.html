@@ -1,0 +1,30 @@
+{{ range (index $.global.Params $.taxonomy) }}
+  {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($.taxonomy | urlize) (. | urlize)) }}
+  {{ with ($.global.Site.GetPage $urlWithoutTrailingSlash) }}
+    {{ $pages := .Pages }}
+    {{ if eq $.order "ByDate" }}
+      {{ $pages = .Pages.ByDate }}
+    {{ else if eq $.order "ByDateReverse" }}
+      {{ $pages = .Pages.ByDate.Reverse }}
+    {{ else if eq $.order "ByTitle" }}
+      {{ $pages = .Pages.ByTitle }}
+    {{ else if eq $.order "ByTitleReverse" }}
+      {{ $pages = .Pages.ByTitle.Reverse }}
+    {{ end }}
+
+    {{ $paginator := .Paginate $pages $.limit }}
+
+    <section{{ with $.class }} class="{{ . }}"{{ end }}>
+      <h4>{{ partial `function/get_page_title.html` . }}</h4>
+      <ul>
+        {{ range $paginator.Pages }}
+          {{ $isCurrentPage := (eq $.global.RelPermalink .RelPermalink) }}
+          <li{{ if $isCurrentPage }} class="active"{{ end }}>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+{{ end }}
+
