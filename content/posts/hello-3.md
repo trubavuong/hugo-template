@@ -173,9 +173,9 @@ Generating pre-built zip archives for distribution:
 $ gulp build dist --prod
 ```
 
-{{< code lang=sh title=static/gulp.sh >}}
+{{< codeblock lang=sh title=static/gulp.sh >}}
 $ gulp build dist --prod
-{{< /code >}}
+{{< /codeblock >}}
 
 ### Docker
 

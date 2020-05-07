@@ -49,7 +49,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni, reic
 
 ### Way to stay
 
-{{< code lang=html title=static/about.html >}}
+{{< codeblock lang=html title=static/about.html >}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,4 +62,4 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni, reic
     <p>Test</p>
   </body>
 </html>
-{{< /code >}}
+{{< /codeblock >}}
