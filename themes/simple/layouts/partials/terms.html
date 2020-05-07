@@ -9,14 +9,11 @@
 
 {{ with $terms }}
   <ul class="{{ $.taxonomy }}{{ with $.class }} {{ . }}{{ end }}">
-    {{ $len := len . }}
-    {{ $lastIndex := sub $len 1 }}
-
-    {{ range $index, $value := . }}
-      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($.taxonomy | urlize) ($value | urlize)) }}
+    {{ range . }}
+      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($.taxonomy | urlize) (. | urlize)) }}
       {{ $url := (printf "%s/" $urlWithoutTrailingSlash) }}
 
-      {{ $name := $value }}
+      {{ $name := . }}
       {{ with ($.global.Site.GetPage $urlWithoutTrailingSlash) }}
         {{ $name = .Title }}
       {{ end }}
