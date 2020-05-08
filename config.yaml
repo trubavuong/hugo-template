@@ -44,8 +44,6 @@ menu:
       url: /posts/
 
 params:
-  titleDelim: "|"
-
   publisher:
     logo: /apple-touch-icon.png
     twitter: mynewhugosite
@@ -55,12 +53,6 @@ params:
     name: Peter
     twitter: peter
     facebook: peter
-
-  pagination:
-    spanStart: 0
-    spanMiddleLeft: 2
-    spanMiddleRight: 2
-    spanEnd: 0
 
   css:
     - /static/modal.min.css
@@ -78,13 +70,23 @@ params:
     themeColor: "#000000"
     msapplicationTileColor: "#bbbbbb"
 
+  titleDelim: "|"
+
+  paginate: 1
+  pagination:
+    spanStart: 0
+    spanMiddleLeft: 2
+    spanMiddleRight: 2
+    spanEnd: 0
+
   share:
     - twitter
 
-  theme: true
+  theme:
+    enable: true
+    class: dark
+    nextThemeText: Light
 
   search:
     enable: true
     placeholder: Search Articles...
-
-  paginate: 1

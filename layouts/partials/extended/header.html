@@ -6,8 +6,8 @@
       </a>
     </div>
     <div class="nav">
-      {{- if and .Site.Params.theme -}}
-        <a href="#" rel="nofollow" class="theme-toggler">Theme</a>
+      {{- if and .Site.Params.theme.enable -}}
+        <a href="#" rel="nofollow" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
       {{- end -}}
 
       {{- if .Param "search.enable" -}}

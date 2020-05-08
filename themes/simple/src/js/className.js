@@ -2,22 +2,24 @@ function reClass(className) {
   return new RegExp("\\b" + reEscape(className) + "\\b", "g");
 }
 
+function hasClass(element, className) {
+  var result = false;
+  if (className) {
+    var regex = reClass(className);
+    result = regex.test(element.className);
+  }
+  return result;
+}
+
 function removeClass(element, className) {
-  var regex = reClass(className);
-  element.className = element.className.replace(regex, "");
+  if (className) {
+    var regex = reClass(className);
+    element.className = element.className.replace(regex, "");
+  }
 }
 
 function addClass(element, className) {
-  var regex = reClass(className);
-  var hasClass = regex.test(element.className);
-  if (!hasClass) {
+  if (!hasClass(element, className)) {
     element.className += (" " + className);
-  }
-  return hasClass;
-}
-
-function toggleClass(element, className) {
-  if (addClass(element, className)) {
-    removeClass(element, className);
   }
 }

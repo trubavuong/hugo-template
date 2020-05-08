@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}"{{ with .Site.Params.theme.class }} class="{{ . }}"{{ end }}>
   <head>
     <title>{{ block "title" . }}{{ if not .IsHome }}{{ partial `function/get_page_title.html` . }} {{ .Site.Params.titleDelim | default "|" }} {{ end }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "seo/index.html" . }}
