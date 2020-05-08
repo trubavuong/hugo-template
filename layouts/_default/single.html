@@ -6,7 +6,11 @@
       <div class="search-company">
         {{ partial "extended/article.html" . }}
 
-        {{ partial "taxonomy_pages.html" (dict "global" . "taxonomy" "series" "order" "ByDate" "limit" 1e9) }}
+        {{ range .Params.series }}
+          <section>
+            {{ partial `section_pages.html` (dict "global" $ "section" (printf "/series/%s" (. | urlize)) "view" "link" "order" "ByDate" "limit" 1e9 "titleLevel" "h4") }}
+          </section>
+        {{ end }}
       </div>
 
       {{ partial "search.html" . }}

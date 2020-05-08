@@ -1,24 +1,41 @@
-{{ $pages := $.global.Site.RegularPages }}
-{{ if eq $.order "ByDate" }}
-  {{ $pages = $.global.Site.RegularPages.ByDate }}
-{{ else if eq $.order "ByDate.Reverse" }}
-  {{ $pages = $.global.Site.RegularPages.ByDate.Reverse }}
-{{ else if eq $.order "ByTitle" }}
-  {{ $pages = $.global.Site.RegularPages.ByTitle }}
-{{ else if eq $.order "ByTitle.Reverse" }}
-  {{ $pages = $.global.Site.RegularPages.ByTitle.Reverse }}
-{{ end }}
-
-{{ with (where $pages "Parent.RelPermalink" $.section) }}
-  <h2>{{ $.title }}</h2>
-  <ul>
-    {{ range first $.limit . }}
-      <li>{{ .Render "summary" }}</li>
-    {{ end }}
-  </ul>
-
-  {{ if gt (len .) $.limit }}
-    <a href="{{ $.section }}">{{ $.morePagesText | safeHTML }}</a>
+{{ $secionPage := ($.global.GetPage $.section) }}
+{{ with $secionPage }}
+  {{ $pages := .RegularPages }}
+  {{ if eq $.order "ByDate" }}
+    {{ $pages = .RegularPages.ByDate }}
+  {{ else if eq $.order "ByDate.Reverse" }}
+    {{ $pages = .RegularPages.ByDate.Reverse }}
+  {{ else if eq $.order "ByTitle" }}
+    {{ $pages = .RegularPages.ByTitle }}
+  {{ else if eq $.order "ByTitle.Reverse" }}
+    {{ $pages = .RegularPages.ByTitle.Reverse }}
   {{ end }}
+
+  {{ $title := ($.title | default (partial `function/get_page_title.html` .)) }}
+
+  {{ with $pages }}
+    {{ if eq $.titleLevel "h2" }}
+      <h2>{{ $title }}</h2>
+    {{ else if eq $.titleLevel "h3" }}
+      <h3>{{ $title }}</h3>
+    {{ else if eq $.titleLevel "h4" }}
+      <h4>{{ $title }}</h4>
+    {{ else if eq $.titleLevel "h5" }}
+      <h5>{{ $title }}</h5>
+    {{ else if eq $.titleLevel "h6" }}
+      <h6>{{ $title }}</h6>
+    {{ end }}
+
+    <ul>
+      {{ range first $.limit . }}
+        <li{{ if eq $.global.RelPermalink .RelPermalink }} class="active"{{ end }}>{{ .Render $.view }}</li>
+      {{ end }}
+    </ul>
+
+    {{ if and $.morePagesText (gt (len .) $.limit) }}
+      <a href="{{ printf `%s/` $.section }}">{{ $.morePagesText | safeHTML }}</a>
+    {{ end }}
+  {{ end }}
+
 {{ end }}
 

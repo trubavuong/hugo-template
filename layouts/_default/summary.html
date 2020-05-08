@@ -1,6 +1,6 @@
 <article class="article-summary">
   <header>
-    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 
     {{ if eq .Kind "taxonomy" }}
       {{ $len := len .Data.Pages }}
