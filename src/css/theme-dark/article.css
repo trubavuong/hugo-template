@@ -1,7 +1,5 @@
 .dark {
-  .article {
-    .share {
-      background: $share_background;
-    }
+  .article__meta {
+    background: $share_background;
   }
 }

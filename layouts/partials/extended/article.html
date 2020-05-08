@@ -1,17 +1,14 @@
 <article class="article">
-  <header class="article__header">
-    <div class="article__header__meta">
+  <header>
+    <h1>{{ .Title }}</h1>
+
+    <div class="article__meta">
       <time>{{ .Date.Format "Jan 2, 2006" }}</time>
       {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
       {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
+      {{ partial "share_text.html" . }}
     </div>
-
-    <h1>{{ .Title }}</h1>
   </header>
 
   <section class="article__body">{{ .Content }}</section>
-
-  <footer>
-    {{ partial "share_text.html" . }}
-  </footer>
 </article>

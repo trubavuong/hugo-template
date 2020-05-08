@@ -5,12 +5,6 @@
     <div class="container">
       <div class="search-company">
         {{ partial "extended/article.html" . }}
-
-        {{ range .Params.series }}
-          <section>
-            {{ partial `section_pages.html` (dict "global" $ "section" (printf "/series/%s" (. | urlize)) "view" "_view_link" "order" "ByDate" "limit" 1e9 "titleLevel" "h4") }}
-          </section>
-        {{ end }}
       </div>
 
       {{ partial "search.html" . }}

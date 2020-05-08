@@ -1,21 +1,15 @@
 .article {
-  .share {
-    margin-top: 3rem;
-    padding: 1rem;
-    background: $share_background;
+  header {
     text-align: center;
   }
 }
 
-.article__header {
-  text-align: center;
+.article__meta {
+  margin: 1rem 0 2rem 0;
+  padding: 1rem;
+  background: $share_background;
+  font-size: $font_size_sm;
 
-  h1 {
-    margin: 1.5rem 0;
-  }
-}
-
-.article__header__meta {
   > * + *,
   .series li + li {
     margin-top: 0.75rem;
