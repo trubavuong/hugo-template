@@ -34,7 +34,7 @@
     <span>Share on </span>
     {{- range $index, $value := $shares -}}
       {{- $delim := "" -}}
-      {{- if eq $index $lastIndex -}}
+      {{- if and (gt $len 1) (eq $index $lastIndex) -}}
         {{- $delim = " or " -}}
       {{- else if gt $index 0 -}}
         {{- $delim = ", " -}}
