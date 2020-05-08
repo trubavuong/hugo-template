@@ -28,7 +28,7 @@
         {{ with $paginator.Pages }}
           <ul>
             {{ range . }}
-              <li>{{ .Render "summary" }}</li>
+              <li>{{ .Render "_view_summary" }}</li>
             {{ end }}
           </ul>
         {{ end }}

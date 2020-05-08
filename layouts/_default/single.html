@@ -8,7 +8,7 @@
 
         {{ range .Params.series }}
           <section>
-            {{ partial `section_pages.html` (dict "global" $ "section" (printf "/series/%s" (. | urlize)) "view" "link" "order" "ByDate" "limit" 1e9 "titleLevel" "h4") }}
+            {{ partial `section_pages.html` (dict "global" $ "section" (printf "/series/%s" (. | urlize)) "view" "_view_link" "order" "ByDate" "limit" 1e9 "titleLevel" "h4") }}
           </section>
         {{ end }}
       </div>
