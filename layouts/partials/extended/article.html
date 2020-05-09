@@ -3,7 +3,7 @@
     <h1>{{ .Title }}</h1>
 
     <div class="article__meta">
-      <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+      <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 2, 2006" }}</time>
       {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
       {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
       {{ partial "share_text.html" . }}

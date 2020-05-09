@@ -35,8 +35,8 @@ privacy:
 menu:
   footer:
     - name: about me
-      pre: ">"
-      post: "<"
+      pre: "&rarr;"
+      post: "&larr;"
       url: /about/
     - name: projects
       url: /projects/
