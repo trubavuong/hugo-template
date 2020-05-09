@@ -5,7 +5,7 @@
     {{ partial "social.html" . }}
 
     <div>
-      <p>&copy; 2020{{ with .Site.Params.author }} {{ .name }}{{ end }}. <a href="http://creativecommons.org/licenses/by/4.0/">Some Rights Reserved</a>.</p>
+      <p>&copy; {{ with .Site.Params.sinceYear }}{{ . }}{{ end }}{{ with .Site.Params.author }} {{ .name }}{{ end }}. <a href="http://creativecommons.org/licenses/by/4.0/">Some Rights Reserved</a>.</p>
     </div>
   </div>
 </footer>

@@ -44,6 +44,8 @@ menu:
       url: /posts/
 
 params:
+  sinceYear: 2020
+
   publisher:
     logo: /apple-touch-icon.png
     twitter: mynewhugosite
