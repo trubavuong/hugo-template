@@ -50,7 +50,7 @@ params:
     facebook: mynewhugosite
 
   author:
-    name: Peter
+    name: &authorName Peter
     twitter: peter
     facebook: peter
     github: peter
@@ -58,7 +58,7 @@ params:
     instagram: peter
     linkedin: peter
     reddit: peter
-    email: hey@gmail.com
+    email: &authorEmail hey@gmail.com
     rss: /index.xml
   authorSocialOrder:
     - email
@@ -107,3 +107,7 @@ params:
   search:
     enable: true
     placeholder: Search Articles...
+
+author:
+  name: *authorName
+  email: *authorEmail
