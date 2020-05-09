@@ -1,0 +1,44 @@
+{{ with .Site.Params.authorSocialOrder }}
+  <ul class="social">
+    {{ range . }}
+      {{ $value := (index $.Site.Params.author .) }}
+      {{- if eq . "email" -}}
+        <li>
+          <a href="mailto:{{ $value }}" rel="noopener noreferrer" target="_blank">Email</a>
+        </li>
+      {{- else if eq . "facebook" -}}
+        <li>
+          <a href="https://www.facebook.com/{{ $value }}" rel="noopener noreferrer" target="_blank">Facebook</a>
+        </li>
+      {{- else if eq . "twitter" -}}
+        <li>
+          <a href="https://twitter.com/{{ $value }}" rel="noopener noreferrer" target="_blank">Twitter</a>
+        </li>
+      {{- else if eq . "reddit" -}}
+        <li>
+          <a href="https://www.reddit.com/{{ $value }}" rel="noopener noreferrer" target="_blank">Reddit</a>
+        </li>
+      {{- else if eq . "linkedin" -}}
+        <li>
+          <a href="https://www.linkedin.com/in/{{ $value }}" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        </li>
+      {{- else if eq . "github" -}}
+        <li>
+          <a href="https://github.com/{{ $value }}" rel="noopener noreferrer" target="_blank">GitHub</a>
+        </li>
+      {{- else if eq . "youtube" -}}
+        <li>
+          <a href="https://www.youtube.com/channel/{{ $value }}" rel="noopener noreferrer" target="_blank">YouTube</a>
+        </li>
+      {{- else if eq . "instagram" -}}
+        <li>
+          <a href="https://www.instagram.com/{{ $value }}" rel="noopener noreferrer" target="_blank">Instagram</a>
+        </li>
+      {{- else if eq . "rss" -}}
+        <li>
+          <a href="{{ $value }}" rel="noopener noreferrer" target="_blank">RSS</a>
+        </li>
+      {{- end -}}
+    {{ end }}
+  </ul>
+{{ end }}
