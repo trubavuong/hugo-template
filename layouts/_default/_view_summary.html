@@ -9,9 +9,7 @@
   </header>
 
   {{ with (partial `function/get_page_description.html` .) }}
-    <section>
-      <p>{{ . }}</p>
-    </section>
+    <p>{{ . }}</p>
   {{ end }}
 
   {{ if .IsPage }}

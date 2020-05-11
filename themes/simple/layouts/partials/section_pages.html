@@ -14,27 +14,29 @@
   {{ $title := ($.title | default (partial `function/get_page_title.html` .)) }}
 
   {{ with $pages }}
-    {{ if eq $.titleLevel "h2" }}
-      <h2>{{ $title }}</h2>
-    {{ else if eq $.titleLevel "h3" }}
-      <h3>{{ $title }}</h3>
-    {{ else if eq $.titleLevel "h4" }}
-      <h4>{{ $title }}</h4>
-    {{ else if eq $.titleLevel "h5" }}
-      <h5>{{ $title }}</h5>
-    {{ else if eq $.titleLevel "h6" }}
-      <h6>{{ $title }}</h6>
-    {{ end }}
-
-    <ul>
-      {{ range first $.limit . }}
-        <li{{ if eq $.global.RelPermalink .RelPermalink }} class="active"{{ end }}>{{ .Render $.view }}</li>
+    <section>
+      {{ if eq $.titleLevel "h2" }}
+        <h2>{{ $title }}</h2>
+      {{ else if eq $.titleLevel "h3" }}
+        <h3>{{ $title }}</h3>
+      {{ else if eq $.titleLevel "h4" }}
+        <h4>{{ $title }}</h4>
+      {{ else if eq $.titleLevel "h5" }}
+        <h5>{{ $title }}</h5>
+      {{ else if eq $.titleLevel "h6" }}
+        <h6>{{ $title }}</h6>
       {{ end }}
-    </ul>
 
-    {{ if and $.morePagesText (gt (len .) $.limit) }}
-      <a href="{{ printf `%s/` $.section }}">{{ $.morePagesText | safeHTML }}</a>
-    {{ end }}
+      <ul>
+        {{ range first $.limit . }}
+          <li{{ if eq $.global.RelPermalink .RelPermalink }} class="active"{{ end }}>{{ .Render $.view }}</li>
+        {{ end }}
+      </ul>
+
+      {{ if and $.morePagesText (gt (len .) $.limit) }}
+        <a href="{{ printf `%s/` $.section }}">{{ $.morePagesText | safeHTML }}</a>
+      {{ end }}
+    </section>
   {{ end }}
 
 {{ end }}
