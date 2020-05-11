@@ -19,11 +19,11 @@
   <ul class="pagination inline-list">
     {{ range $paginator.Pagers }}
       {{ if or (and (ge .PageNumber $start1) (le .PageNumber $start2)) (and (ge .PageNumber $middle1) (le .PageNumber $middle2)) (and (ge .PageNumber $end1) (le .PageNumber $end2)) }}
-        <li class="pagination__item{{ if eq .PageNumber $pageNumber }} pagination__item--active{{ end }}">
+        <li{{ if eq .PageNumber $pageNumber }} class="active"{{ end }}>
           <a href="{{ .URL }}">{{ .PageNumber }}</a>
         </li>
       {{ else if or (eq .PageNumber $middle3) (eq .PageNumber $middle4) }}
-        <li class="pagination__item pagination__item--disabled">&hellip;</li>
+        <li>&hellip;</li>
       {{ end }}
     {{ end }}
   </ul>

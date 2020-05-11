@@ -1,9 +1,7 @@
 .pagination {
   margin: 3rem 0;
   text-align: center;
-}
 
-.pagination__item {
   a {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -12,7 +10,7 @@
   }
 
   a:hover,
-  &.pagination__item--active a {
+  .active a {
     color: $pagination_active_text;
     background: $pagination_active_background;
   }

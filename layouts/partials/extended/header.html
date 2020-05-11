@@ -7,11 +7,11 @@
     </div>
     <div class="nav">
       {{- if and .Site.Params.theme.enable -}}
-        <a href="#" rel="nofollow" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
+        <a href="#" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
       {{- end -}}
 
       {{- if .Param "search.enable" -}}
-        <a href="#" rel="nofollow" class="search-opener">Search</a>
+        <a href="#" class="search-opener">Search</a>
       {{- end -}}
     </div>
   </div>

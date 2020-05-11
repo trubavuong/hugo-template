@@ -2,16 +2,16 @@
 {{ $isAlwaysVisible := or $is404Page (.Param `search.visible`) }}
 
 <div class="search"{{ if (not $isAlwaysVisible) }} style="display:none"{{ end }}>
-  <div class="search__header">
-    <input type="text" placeholder="{{ .Site.Params.search.placeholder | default `Search...` }}" class="search__input">
-    <a href="#" class="search__clear">Clear</a>
+  <div class="search-header">
+    <input type="text" placeholder="{{ .Site.Params.search.placeholder | default `Search...` }}" class="search-input">
+    <a href="#" class="search-clear">Clear</a>
 
     {{- if not $isAlwaysVisible -}}
-      <a href="#" class="search__close">Close</a>
+      <a href="#" class="search-close">Close</a>
     {{- end -}}
   </div>
 
   <h3>Search Results</h3>
 
-  <div class="search__results"></div>
+  <div class="search-results"></div>
 </div>

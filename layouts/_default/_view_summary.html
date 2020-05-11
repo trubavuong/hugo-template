@@ -1,11 +1,6 @@
 <article class="article-summary">
   <header>
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-
-    {{ if eq .Kind "taxonomy" }}
-      {{ $len := len .Data.Pages }}
-      <div>{{ $len }} article{{ if gt $len 1 }}s{{ end }}</div>
-    {{ end }}
   </header>
 
   {{ with (partial `function/get_page_description.html` .) }}

@@ -14,7 +14,7 @@
   {{ $title := ($.title | default (partial `function/get_page_title.html` .)) }}
 
   {{ with $pages }}
-    <section>
+    <section{{ with $.class }} class="{{ . }}"{{ end }}>
       {{ if eq $.titleLevel "h2" }}
         <h2>{{ $title }}</h2>
       {{ else if eq $.titleLevel "h3" }}

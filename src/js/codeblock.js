@@ -16,11 +16,11 @@
   }
 
   function addCopyButtonToCodeblock(panel) {
-    var panelHeader = panel.querySelector(".codeblock__header");
+    var panelHeader = panel.querySelector(".codeblock-header");
     if (panelHeader) {
       var button = document.createElement("button");
       button.innerText = "Copy";
-
+      button.className = "codeblock-copy";
       addEvent(button, "click", copyCodeblock);
 
       panelHeader.appendChild(button);

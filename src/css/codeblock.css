@@ -1,4 +1,4 @@
-.codeblock__header {
+.codeblock-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,19 +6,19 @@
   overflow-wrap: break-word;
   padding: 0.25rem 1rem;
   font-size: $font_size_sm;
+}
 
-  > span {
-    max-width: 100%;
-  }
+.codeblock-title {
+  max-width: 100%;
+}
 
-  > button {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid $codeblock_header_button_border;
-  }
+.codeblock-copy {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid $codeblock_header_button_border;
+}
 
-  &,
-  > button {
-    color: $codeblock_header_text;
-    background: $codeblock_header_background;
-  }
+.codeblock-header,
+.codeblock-copy {
+  color: $codeblock_header_text;
+  background: $codeblock_header_background;
 }

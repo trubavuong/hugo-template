@@ -1,10 +1,8 @@
-.article {
-  header {
-    text-align: center;
-  }
+.article-header {
+  text-align: center;
 }
 
-.article__meta {
+.article-meta {
   margin: 1rem 0 2rem 0;
   padding: 1rem;
   background: $share_background;
@@ -16,7 +14,7 @@
   }
 }
 
-.article__body {
+.article-body {
   > * + *,
   blockquote > * + * {
     margin-top: 1rem;

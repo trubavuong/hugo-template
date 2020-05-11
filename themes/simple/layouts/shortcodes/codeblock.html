@@ -4,10 +4,10 @@
 {{ $inner := trim .Inner "\n\r" }}
 
 <div class="codeblock">
-  <div class="codeblock__header">
-    <span>{{ $title | default $lang }}</span>
+  <div class="codeblock-header">
+    <span class="codeblock-title">{{ $title | default $lang }}</span>
   </div>
-  <div class="codeblock__body">
+  <div class="codeblock-body">
     {{ highlight $inner $lang $options }}
   </div>
 </div>
