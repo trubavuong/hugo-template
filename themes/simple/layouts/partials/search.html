@@ -4,6 +4,7 @@
 <div class="search"{{ if (not $isAlwaysVisible) }} style="display:none"{{ end }}>
   <div class="search-header">
     <input type="text" placeholder="{{ .Site.Params.search.placeholder | default `Search...` }}" class="search-input">
+
     <a href="#" class="search-clear">Clear</a>
 
     {{- if not $isAlwaysVisible -}}

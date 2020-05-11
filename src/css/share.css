@@ -3,20 +3,22 @@
   text-align: center;
 }
 
-.share__header {
+.share-header {
   padding: 0.5rem 0;
   font-weight: 700;
 }
 
-.share__item {
-  svg {
-    width: $icon_size;
-    transition: all 0.2s ease-in-out;
-  }
-
-  &:hover {
+.share-body {
+  a {
     svg {
-      transform: translateY(-0.25rem);
+      width: $icon_size;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(-0.25rem);
+      }
     }
   }
 }

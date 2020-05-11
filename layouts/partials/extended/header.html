@@ -5,14 +5,18 @@
         <img src="/apple-touch-icon.png" alt="logo">
       </a>
     </div>
-    <div class="nav">
+    <ul class="inline-list">
       {{- if and .Site.Params.theme.enable -}}
-        <a href="#" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
+        <li>
+          <a href="#" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
+        </li>
       {{- end -}}
 
       {{- if .Param "search.enable" -}}
-        <a href="#" class="search-opener">Search</a>
+        <li>
+          <a href="#" class="search-opener">Search</a>
+        </li>
       {{- end -}}
-    </div>
+    </ul>
   </div>
 </header>
