@@ -18,10 +18,9 @@ $text_special_700: $green_700;
 $text_special_800: $green_800;
 $text_special_900: $green_900;
 
-$pagination_text: $white;
-$pagination_background: $text_special_600;
-$pagination_active_text: $text_special_600;
-$pagination_active_background: $white;
+$pagination_text: $gray_100;
+$pagination_border: $gray_500;
+$pagination_active_background: $gray_700;
 
 $code_text: $white;
 $code_background: $text_special_700;

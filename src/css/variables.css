@@ -121,10 +121,9 @@ $text_special_700: $red_700;
 $text_special_800: $red_800;
 $text_special_900: $red_900;
 
-$pagination_text: $text_special_600;
-$pagination_background: $white;
-$pagination_active_text: $white;
-$pagination_active_background: $text_special_600;
+$pagination_text: $gray_800;
+$pagination_border: $gray_500;
+$pagination_active_background: $gray_300;
 
 $code_text: $text_special_700;
 $code_background: $text_special_100;

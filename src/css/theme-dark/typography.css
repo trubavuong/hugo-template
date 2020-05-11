@@ -15,7 +15,6 @@
 
   a {
     color: $link_text;
-    border-bottom-color: $link_text;
 
     &:hover {
       color: $link_hover_text;

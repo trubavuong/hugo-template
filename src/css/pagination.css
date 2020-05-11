@@ -6,12 +6,11 @@
     display: inline-block;
     padding: 0.5rem 1rem;
     color: $pagination_text;
-    background: $pagination_background;
+    border: 1px solid $pagination_border;
   }
 
   a:hover,
   .active a {
-    color: $pagination_active_text;
     background: $pagination_active_background;
   }
 }

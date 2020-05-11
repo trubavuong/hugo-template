@@ -2,12 +2,11 @@
   .pagination {
     a {
       color: $pagination_text;
-      background: $pagination_background;
+      border-color: $pagination_border;
     }
 
     a:hover,
     .active a {
-      color: $pagination_active_text;
       background: $pagination_active_background;
     }
   }
