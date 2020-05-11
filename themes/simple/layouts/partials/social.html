@@ -1,5 +1,5 @@
 {{ with .Site.Params.authorSocialOrder }}
-  <ul class="social">
+  <ul class="inline-list">
     {{ range . }}
       {{ $value := (index $.Site.Params.author .) }}
       {{- if eq . "email" -}}
