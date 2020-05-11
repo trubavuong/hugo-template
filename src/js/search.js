@@ -1,11 +1,11 @@
 (function () {
   var searcher;
   var searchTimeoutId;
-  var searchElement = document.querySelector("#search");
-  var searchCloseElement = document.querySelector("#search__close");
-  var searchClearElement = document.querySelector("#search__clear");
-  var searchInputElement = document.querySelector("#search__input");
-  var searchResultsElement = document.querySelector("#search__results");
+  var searchElement = document.querySelector(".search");
+  var searchCloseElement = searchElement.querySelector(".search__close");
+  var searchClearElement = searchElement.querySelector(".search__clear");
+  var searchInputElement = searchElement.querySelector(".search__input");
+  var searchResultsElement = searchElement.querySelector(".search__results");
   var searchCompanyElements = document.querySelectorAll(".search-company");
   var limit = 50;
   var isLoadSearchIndexes = false;

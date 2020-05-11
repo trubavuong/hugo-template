@@ -1,4 +1,4 @@
-#search__header {
+.search__header {
   display: flex;
   align-items: center;
   margin: 1rem 0;
@@ -9,6 +9,6 @@
   }
 }
 
-#search__input {
+.search__input {
   flex-grow: 1;
 }
