@@ -28,6 +28,10 @@
         </li>
       {{- else if eq . "youtube" -}}
         <li>
+          <a href="https://www.youtube.com/{{ $value }}" rel="noopener noreferrer" target="_blank">YouTube</a>
+        </li>
+      {{- else if eq . "youtubeChannel" -}}
+        <li>
           <a href="https://www.youtube.com/channel/{{ $value }}" rel="noopener noreferrer" target="_blank">YouTube</a>
         </li>
       {{- else if eq . "instagram" -}}
