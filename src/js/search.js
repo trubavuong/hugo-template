@@ -78,9 +78,13 @@
     var html = "";
     for (var i = 0; i < Math.min(results.length, limit); i += 1) {
       var result = results[i].item;
-      html += "<li><div><h3><a href=\"" + result.url + "\">" + result.title + "</a></h3><p>" + result.description + "</p></div></li>";
+      html += "<li><article class=\"article-summary\"><header><h3><a href=\"" + result.url + "\">" + result.title + "</a></h3></header><p>" + result.description + "</p></article></li>";
     }
-    html = (html ? "<ul>" + html + "</ul>" : "<p>Not found.</p>");
+    html = (
+      html
+        ? "<ul>" + html + "</ul>"
+        : (text ? "<p>No Results.</p>" : "")
+    );
 
     searchResultsElement.innerHTML = html;
   }
