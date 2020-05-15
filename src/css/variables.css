@@ -125,7 +125,7 @@ $pagination_text: $gray_800;
 $pagination_border: $gray_500;
 
 $code_text: #f8f8f2;
-$code_background: #282a36;
+$code_background: #272822;
 
 $codeblock_border: $gray_600;
 /* $codeblock_header_text: $code_text; */
