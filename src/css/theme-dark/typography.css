@@ -4,8 +4,7 @@
   }
 
   blockquote {
-    border-left-color: $blockquote_border;
-    background: $blockquote_background;
+    border-color: $blockquote_border;
   }
 
   :not(pre) > code {
