@@ -173,6 +173,7 @@ Generating pre-built zip archives for distribution:
 $ gulp build dist --prod
 ```
 
+**static/gulp.sh**
 {{< codeblock lang=sh >}}
 $ gulp build dist --prod
 {{< /codeblock >}}
@@ -188,6 +189,11 @@ Dillinger is very easy to install and deploy in a Docker container.
 By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
 
 ```sh
+cd dillinger
+docker build -t joemccann/dillinger:${package.json.version} .
+```
+
+```java
 cd dillinger
 docker build -t joemccann/dillinger:${package.json.version} .
 ```
