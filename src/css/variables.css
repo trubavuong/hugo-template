@@ -125,11 +125,11 @@ $pagination_text: $gray_800;
 $pagination_border: $gray_500;
 
 $code_text: #f8f8f2;
-$code_background: #272822;
+$code_background: #282a36;
 
+$codeblock_border: $gray_600;
 $codeblock_header_text: $code_text;
 $codeblock_header_background: $gray_900;
-$codeblock_header_button_border: $gray_800;
 
 $blockquote_border: $gray_400;
 

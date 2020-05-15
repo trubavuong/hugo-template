@@ -4,8 +4,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   overflow-wrap: break-word;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: $font_size_sm;
+  border-bottom: 0 !important;
 }
 
 .codeblock-title {
@@ -14,11 +15,22 @@
 
 .codeblock-copy {
   padding: 0.25rem 0.5rem;
-  border: 1px solid $codeblock_header_button_border;
+  border: 1px solid $codeblock_border;
 }
 
 .codeblock-header,
 .codeblock-copy {
   color: $codeblock_header_text;
   background: $codeblock_header_background;
+}
+
+.codeblock-header,
+.highlight {
+  border: 1px solid $codeblock_border;
+}
+
+.codeblock {
+  .highlight {
+    border-top: 0;
+  }
 }
