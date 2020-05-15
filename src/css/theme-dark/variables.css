@@ -19,15 +19,11 @@ $text_special_800: $green_800;
 $text_special_900: $green_900;
 
 $pagination_text: $gray_100;
-$pagination_border: $gray_500;
 $pagination_active_background: $gray_700;
-
-$blockquote_border: $gray_400;
 
 $link_text: $text_special_600;
 $link_hover_text: $white;
 
-$table_border: $gray_500;
 $table_header_background: $gray_700;
 
 $share_background: $gray_800;

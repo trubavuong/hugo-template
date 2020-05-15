@@ -3,10 +3,6 @@
     background: $table_header_background;
   }
 
-  blockquote {
-    border-color: $blockquote_border;
-  }
-
   a {
     color: $link_text;
 

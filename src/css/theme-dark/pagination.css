@@ -2,7 +2,6 @@
   .pagination {
     a {
       color: $pagination_text;
-      border-color: $pagination_border;
     }
 
     a:hover,
