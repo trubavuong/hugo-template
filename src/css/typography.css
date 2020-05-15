@@ -57,7 +57,7 @@ textarea {
 html {
   box-sizing: border-box;
   font-size: $font_size;
-  line-height: $lineHeight;
+  line-height: $line_height;
   scroll-behavior: smooth;
 }
 
@@ -91,7 +91,7 @@ th {
 }
 
 th {
-  background: $table_header_background;
+  background: $surface_background;
 }
 
 td:not([align]),

@@ -1,6 +1,6 @@
 .dark {
   th {
-    background: $table_header_background;
+    background: $surface_background;
   }
 
   a {

@@ -6,7 +6,7 @@
 
     a:hover,
     .active a {
-      background: $pagination_active_background;
+      background: $surface_background;
     }
   }
 }

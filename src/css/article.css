@@ -5,7 +5,7 @@
 .article-meta {
   margin: 1rem 0 2rem 0;
   padding: 1rem;
-  background: $share_background;
+  background: $surface_background;
   font-size: $font_size_sm;
 
   > * + *,
