@@ -125,8 +125,8 @@ $pagination_text: $gray_800;
 $pagination_border: $gray_500;
 $pagination_active_background: $gray_300;
 
-$code_text: $text_special_700;
-$code_background: $text_special_100;
+$code_text: #f8f8f2;
+$code_background: #272822;
 
 $codeblock_header_text: $white;
 $codeblock_header_background: $gray_900;
@@ -159,5 +159,7 @@ $font_size_h1: 2.5rem;
 $font_mono: "Fira Mono", Menlo, Monaco, Consolas, "Liberation Mono",
   "Courier New", monospace;
 $font_mono_size: $font_size_sm;
+
+$lineHeight: 1.75;
 
 $icon_size: 36px;

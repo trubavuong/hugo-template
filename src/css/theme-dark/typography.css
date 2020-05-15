@@ -7,11 +7,6 @@
     border-color: $blockquote_border;
   }
 
-  :not(pre) > code {
-    color: $code_text;
-    background: $code_background;
-  }
-
   a {
     color: $link_text;
 

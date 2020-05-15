@@ -22,9 +22,6 @@ $pagination_text: $gray_100;
 $pagination_border: $gray_500;
 $pagination_active_background: $gray_700;
 
-$code_text: $white;
-$code_background: $text_special_700;
-
 $codeblock_header_text: $white;
 $codeblock_header_background: $gray_900;
 $codeblock_header_button_border: $gray_800;
