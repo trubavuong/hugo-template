@@ -1,27 +1,17 @@
-$primary_100: $blue_100;
-$primary_200: $blue_200;
-$primary_300: $blue_300;
-$primary_400: $blue_400;
-$primary_500: $blue_500;
-$primary_600: $blue_600;
-$primary_700: $blue_700;
-$primary_800: $blue_800;
-$primary_900: $blue_900;
-
-$text_special_100: $green_100;
-$text_special_200: $green_200;
-$text_special_300: $green_300;
-$text_special_400: $green_400;
-$text_special_500: $green_500;
-$text_special_600: $green_600;
-$text_special_700: $green_700;
-$text_special_800: $green_800;
-$text_special_900: $green_900;
+$primary_100: $yellow_100;
+$primary_200: $yellow_200;
+$primary_300: $yellow_300;
+$primary_400: $yellow_400;
+$primary_500: $yellow_500;
+$primary_600: $yellow_600;
+$primary_700: $yellow_700;
+$primary_800: $yellow_800;
+$primary_900: $yellow_900;
 
 $pagination_text: $gray_100;
 
-$link_text: $text_special_600;
-$link_hover_text: $white;
+$link_text: $primary_500;
+$link_hover_text: $gray_900;
 
 $surface_background: $gray_800;
 
