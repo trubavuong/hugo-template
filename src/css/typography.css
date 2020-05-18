@@ -132,7 +132,6 @@ figcaption {
 }
 
 a {
-  padding: 1px;
   color: $link_text;
   text-decoration: none;
 
