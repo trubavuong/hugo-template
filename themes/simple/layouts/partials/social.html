@@ -26,6 +26,10 @@
         <li>
           <a href="https://github.com/{{ $value }}" rel="noopener noreferrer" target="_blank">GitHub</a>
         </li>
+      {{- else if eq . "codepen" -}}
+        <li>
+          <a href="https://codepen.io/{{ $value }}" rel="noopener noreferrer" target="_blank">CodePen</a>
+        </li>
       {{- else if eq . "youtube" -}}
         <li>
           <a href="https://www.youtube.com/{{ $value }}" rel="noopener noreferrer" target="_blank">YouTube</a>

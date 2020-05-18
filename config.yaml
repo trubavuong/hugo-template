@@ -60,11 +60,13 @@ params:
     instagram: peter
     linkedin: peter
     reddit: peter
+    codepen: peter
     email: &authorEmail hey@gmail.com
     rss: /index.xml
   authorSocialOrder:
     - email
     - github
+    - codepen
     - facebook
     - twitter
     - youtube
