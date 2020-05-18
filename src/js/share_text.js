@@ -4,10 +4,13 @@
 
     copy(location.origin + location.pathname);
 
-    button.innerText = "Copied!";
-    setTimeout(function () {
-      button.innerText = "Copy Link";
-    }, 2000);
+    var button = e.target || e.srcElement;
+    if (button) {
+      button.innerText = "Copied!";
+      setTimeout(function () {
+        button.innerText = "Copy Link";
+      }, 2000);
+    }
   }
 
   var buttons = document.querySelectorAll(".copy-link");
