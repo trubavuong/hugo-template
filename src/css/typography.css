@@ -142,10 +142,6 @@ a {
 }
 
 body {
-  background: $body_background;
-}
-
-body,
-button {
   color: $body_text;
+  background: $body_background;
 }
