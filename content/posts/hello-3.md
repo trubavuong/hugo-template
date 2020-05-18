@@ -53,6 +53,8 @@ You can also:
 - Drag and drop markdown and HTML files into Dillinger
 - Export documents as Markdown, HTML and PDF
 
+{{< codepen user="fidaxxx" pen="zYvMBBE" >}}
+
 ## Details
 
 Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email. As [John Gruber] writes on the [Markdown site][df1]
