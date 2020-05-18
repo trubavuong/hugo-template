@@ -1,5 +1,5 @@
 .dark {
   .highlight {
-    border: 1px solid $codeblock_border;
+    border: 1px solid $surface_border;
   }
 }

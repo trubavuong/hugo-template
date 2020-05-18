@@ -111,27 +111,22 @@ $primary_700: $red_700;
 $primary_800: $red_800;
 $primary_900: $red_900;
 
-$pagination_text: $gray_800;
-$pagination_border: $gray_500;
-
-$code_text: #f8f8f2;
+$code_text: $white;
 $code_background: #272822;
 
-$codeblock_border: $gray_600;
+/* $codeblock_border: $gray_600; */
 /* $codeblock_header_text: $code_text; */
 /* $codeblock_header_background: $gray_900; */
-
-$blockquote_border: $gray_400;
 
 $link_text: $primary_700;
 $link_hover_text: $white;
 
-$table_border: $gray_500;
-
-$body_text: $black;
+$body_text: $gray_900;
 $body_background: $white;
 $body_width: 960px;
 
+$surface_text: $gray_800;
+$surface_border: $gray_600;
 $surface_background: $gray_300;
 
 $font_sans: "Fira Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

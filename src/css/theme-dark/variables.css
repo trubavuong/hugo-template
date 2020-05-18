@@ -8,11 +8,10 @@ $primary_700: $yellow_700;
 $primary_800: $yellow_800;
 $primary_900: $yellow_900;
 
-$pagination_text: $gray_100;
-
 $link_text: $primary_500;
 $link_hover_text: $gray_900;
 
+$surface_text: $gray_100;
 $surface_background: $gray_800;
 
 $body_text: $white;

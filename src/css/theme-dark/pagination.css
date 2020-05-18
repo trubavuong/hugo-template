@@ -1,7 +1,7 @@
 .dark {
   .pagination {
     a {
-      color: $pagination_text;
+      color: $surface_text;
     }
 
     a:hover,

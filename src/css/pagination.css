@@ -5,8 +5,8 @@
   a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    color: $pagination_text;
-    border: 1px solid $pagination_border;
+    color: $surface_text;
+    border: 1px solid $surface_border;
   }
 
   a:hover,
