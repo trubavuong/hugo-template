@@ -30,6 +30,10 @@
         <li>
           <a href="https://codepen.io/{{ $value }}" rel="noopener noreferrer" target="_blank">CodePen</a>
         </li>
+      {{- else if eq . "codesandbox" -}}
+        <li>
+          <a href="https://codesandbox.io/u/{{ $value }}" rel="noopener noreferrer" target="_blank">CodeSandbox</a>
+        </li>
       {{- else if eq . "youtube" -}}
         <li>
           <a href="https://www.youtube.com/{{ $value }}" rel="noopener noreferrer" target="_blank">YouTube</a>
