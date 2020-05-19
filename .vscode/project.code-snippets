@@ -77,5 +77,14 @@
       "{{< codepen user=\"${1}\" pen=\"${2}\" caption=\"${3}\" height=\"${4:265}\" >}}"
     ],
     "description": "CodePen ShortCode"
+  },
+
+  "codesandbox": {
+    "scope": "markdown",
+    "prefix": "codesandbox",
+    "body": [
+      "{{< codesandbox id=\"${1}\" caption=\"${2}\" height=\"${3:265}\" >}}"
+    ],
+    "description": "CodeSandbox ShortCode"
   }
 }
