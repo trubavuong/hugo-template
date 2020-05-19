@@ -53,7 +53,7 @@ You can also:
 - Drag and drop markdown and HTML files into Dillinger
 - Export documents as Markdown, HTML and PDF
 
-{{< codepen user="fidaxxx" pen="zYvMBBE" >}}
+{{< codepen user="fidaxxx" pen="zYvMBBE" caption="My Pen is cool, isn't it?" height=600 >}}
 
 ## Details
 
