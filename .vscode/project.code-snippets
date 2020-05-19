@@ -49,6 +49,27 @@
     "description": "Image Figure ShortCode"
   },
 
+  "instagram": {
+    "scope": "markdown",
+    "prefix": "instagram",
+    "body": ["{{< instagram ${1:id} ${2:hidecaption} >}}"],
+    "description": "Instagram ShortCode"
+  },
+
+  "tweet": {
+    "scope": "markdown",
+    "prefix": "tweet",
+    "body": ["{{< tweet ${1:id} >}}"],
+    "description": "Tweet ShortCode"
+  },
+
+  "youtube": {
+    "scope": "markdown",
+    "prefix": "youtube",
+    "body": ["{{< youtube ${1:id} >}}"],
+    "description": "Youtube ShortCode"
+  },
+
   "codepen": {
     "scope": "markdown",
     "prefix": "codepen",

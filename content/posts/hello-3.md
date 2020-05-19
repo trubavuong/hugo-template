@@ -114,6 +114,8 @@ $ npm install --production
 $ NODE_ENV=production node app
 ```
 
+{{< youtube iwGuiSnr2Qc >}}
+
 ### Plugins
 
 Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
@@ -126,6 +128,8 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 | OneDrive         | [plugins/onedrive/README.md][plod]        | Good   |
 | Medium           | [plugins/medium/README.md][plme]          | Good   |
 | Google Analytics | [plugins/googleanalytics/README.md][plga] | Good   |
+
+{{< tweet 1254737754233036800 >}}
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
@@ -173,6 +177,10 @@ For production release:
 ```sh
 $ gulp build --prod
 ```
+
+{{< instagram BWNjjyYFxVx >}}
+
+{{< instagram BWNjjyYFxVx hidecaption >}}
 
 Generating pre-built zip archives for distribution:
 
