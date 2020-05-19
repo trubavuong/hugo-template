@@ -52,11 +52,16 @@
   margin: 2rem 0;
 
   > * + * {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .tags {
     display: inline-block;
     margin-left: 1rem;
+
+    &::before {
+      content: "\2014";
+      margin-right: 1rem;
+    }
   }
 }
