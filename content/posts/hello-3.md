@@ -8,6 +8,7 @@ tags:
 series:
   - Go to my home
   - Mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor
+  - i-dun-know
 authors:
   - name: Jack
     twitter: jack
@@ -53,7 +54,7 @@ You can also:
 - Drag and drop markdown and HTML files into Dillinger
 - Export documents as Markdown, HTML and PDF
 
-{{< codepen user="fidaxxx" pen="zYvMBBE" caption="My Pen is cool, isn't it?" height=600 >}}
+{{< codepen user="fidaxxx" pen="zYvMBBE" caption="My Pen is cool, isn't it?" height="500" >}}
 
 ## Details
 
@@ -131,6 +132,10 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 [Neat]({{< ref "posts/hello.md" >}})
 
 [Who]({{< relref "notes/readme.md" >}})
+
+![screen shot](https://scotch-res.cloudinary.com/image/upload/dpr_1,w_800,q_auto:good,f_auto/v1549531860/m3p0mnjc05r4xu2rljaj.png)
+
+[Image source](https://scotch-res.cloudinary.com/image/upload/dpr_1,w_800,q_auto:good,f_auto/v1549531860/m3p0mnjc05r4xu2rljaj.png)
 
 ### Development
 
