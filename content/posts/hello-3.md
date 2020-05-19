@@ -152,6 +152,8 @@ Make a change in your file and instantaneously see your updates!
 
 {{< figure src="/posts/hello/a.jpg" alt="Picture of something" caption="Steve Francia" >}}
 
+{{< figure src="https://cldup.com/dTxpPi9lDf.thumb.png" alt="Picture of something" caption="Steve Francia" >}}
+
 Open your favorite Terminal and run these commands.
 
 First Tab:
