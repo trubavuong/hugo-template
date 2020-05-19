@@ -1,14 +1,17 @@
 .search-header {
-  display: flex;
-  align-items: center;
   margin: 1rem 0;
+}
 
-  > * + * {
+.search-buttons {
+  float: right;
+  margin-bottom: 1rem;
+
+  a + a {
     margin-left: 1rem;
   }
 }
 
 .search-input {
-  flex-grow: 1;
-  padding: 0.5rem 1rem;
+  width: 100%;
+  padding: 0.75rem;
 }
