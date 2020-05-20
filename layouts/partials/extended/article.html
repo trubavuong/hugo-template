@@ -4,7 +4,7 @@
 
     <div class="article-meta">
       <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-      {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "class" "inline-list") }}
+      {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "delim" "," "class" "inline-list inline-list-sm") }}
       {{ partial "terms.html" (dict "global" . "taxonomy" "series" "prefix" "Series: ") }}
       {{ partial "share_text.html" . }}
     </div>

@@ -57,11 +57,10 @@
 
   .tags {
     display: inline-block;
-    margin-left: 1rem;
 
-    &::before {
+    &::after {
       content: "\2014";
-      margin-right: 1rem;
+      margin: 0 1rem;
     }
   }
 }

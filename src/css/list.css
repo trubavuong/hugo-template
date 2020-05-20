@@ -4,6 +4,12 @@
   }
 
   li + li {
-    margin-left: 1rem;
+    margin-left: 2rem;
+  }
+}
+
+.inline-list-sm {
+  li + li {
+    margin-left: 0.5rem;
   }
 }
