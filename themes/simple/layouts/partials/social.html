@@ -46,10 +46,6 @@
         <li>
           <a href="https://www.instagram.com/{{ $value }}" rel="noopener noreferrer" target="_blank">Instagram</a>
         </li>
-      {{- else if eq . "rss" -}}
-        <li>
-          <a href="{{ $value }}" rel="noopener noreferrer" target="_blank">RSS</a>
-        </li>
       {{- end -}}
     {{ end }}
   </ul>

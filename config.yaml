@@ -41,6 +41,8 @@ menu:
       url: /projects/
     - name: blog
       url: /posts/
+    - name: RSS
+      url: /index.xml
 
 params:
   sinceYear: 2020
@@ -61,7 +63,6 @@ params:
     reddit: peter
     codepen: peter
     email: &authorEmail hey@gmail.com
-    rss: /index.xml
   authorSocialOrder:
     - email
     - github
@@ -72,7 +73,6 @@ params:
     - instagram
     - linkedin
     - reddit
-    - rss
 
   css:
     - /static/modal.min.css
