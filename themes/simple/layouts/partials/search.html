@@ -4,11 +4,16 @@
 <div class="search"{{ if (not $isAlwaysVisible) }} style="display:none"{{ end }}>
   <div class="search-header">
     <div class="search-buttons">
-      <a href="#" class="search-clear">Clear</a>
-
-      {{- if not $isAlwaysVisible -}}
-        <a href="#" class="search-close">Close</a>
-      {{- end -}}
+      <ul class="inline-list">
+        <li>
+          <a href="#" class="search-clear">Clear</a>
+        </li>
+        {{- if not $isAlwaysVisible -}}
+          <li>
+            <a href="#" class="search-close">Close</a>
+          </li>
+        {{- end -}}
+      </ul>
     </div>
 
     <input type="text" placeholder="{{ .Site.Params.search.placeholder | default `Search...` }}" class="search-input">
