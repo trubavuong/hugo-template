@@ -1,5 +1,7 @@
+{{ $class := $.class }}
+
 {{ with (index .global.Site.Menus .menu) }}
-  <ul{{ with $.class }} class="{{ . }}"{{ end }}>
+  <ul{{ with $class }} class="{{ . }}"{{ end }}>
     {{ range . }}
       <li>
         <a href="{{ .URL }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>

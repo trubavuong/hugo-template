@@ -1,25 +1,32 @@
+{{ $global := $.global }}
+{{ $taxonomy := $.taxonomy }}
+{{ $class := $.class }}
+{{ $prefix := $.prefix }}
+{{ $suffix := $.suffix }}
+{{ $all := $.all }}
+
 {{ $terms := slice }}
-{{ if $.all }}
-  {{ range (index $.global.Site.Taxonomies $.taxonomy).Alphabetical }}
+{{ if $all }}
+  {{ range (index $global.Site.Taxonomies $taxonomy).Alphabetical }}
     {{ $terms = $terms | append .Name }}
   {{ end }}
 {{ else }}
-  {{ $terms = index $.global.Params $.taxonomy }}
+  {{ $terms = index $global.Params $taxonomy }}
 {{ end }}
 
 {{ with $terms }}
-  <ul class="{{ $.taxonomy }}{{ with $.class }} {{ . }}{{ end }}">
+  <ul class="{{ $taxonomy }}{{ with $class }} {{ . }}{{ end }}">
     {{ range . }}
-      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($.taxonomy | urlize) (. | urlize)) }}
+      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($taxonomy | urlize) (. | urlize)) }}
       {{ $url := (printf "%s/" $urlWithoutTrailingSlash) }}
 
       {{ $name := . }}
-      {{ with ($.global.Site.GetPage $urlWithoutTrailingSlash) }}
+      {{ with ($global.Site.GetPage $urlWithoutTrailingSlash) }}
         {{ $name = .Title }}
       {{ end }}
 
       <li>
-        <a href="{{ $url }}">{{ $.prefix | default "" }}{{ $name }}{{ $.suffix | default "" }}</a>
+        <a href="{{ $url }}">{{ $prefix | default "" }}{{ $name }}{{ $suffix | default "" }}</a>
       </li>
     {{ end }}
   </ul>
