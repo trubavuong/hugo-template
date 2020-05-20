@@ -1,10 +1,9 @@
 @import "./variables.css";
 @import "./typography.css";
-@import "./container.css";
+@import "./layout.css";
 @import "./pagination.css";
 @import "./article.css";
 @import "./syntax.css";
 @import "./list.css";
 @import "./search.css";
-
 @import "./theme-dark/index.css";
