@@ -14,13 +14,6 @@
     "description": "Tag"
   },
 
-  "series": {
-    "scope": "yaml",
-    "prefix": "series",
-    "body": ["- ${1|go-to-my-home|}"],
-    "description": "Series"
-  },
-
   "toc": {
     "scope": "markdown",
     "prefix": "toc",

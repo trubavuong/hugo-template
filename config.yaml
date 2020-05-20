@@ -6,7 +6,6 @@ googleAnalytics: UA-123456
 enableRobotsTXT: true
 
 taxonomies:
-  series: series
   tag: tags
 
 outputs:

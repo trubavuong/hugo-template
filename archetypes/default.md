@@ -5,8 +5,6 @@ title: "{{ replace .Name "-" " " | title }}"
 summary:
 tags:
   -
-series:
-  -
 images:
   -
 ---
