@@ -6,15 +6,16 @@
 
 body {
   > header {
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    .brand {
+      display: inline-block;
+
+      img {
+        width: $icon_size;
+      }
     }
 
-    .logo {
-      width: $icon_size;
+    .inline-list {
+      float: right;
     }
   }
 
