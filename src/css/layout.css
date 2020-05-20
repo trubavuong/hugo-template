@@ -6,6 +6,8 @@
 
 body {
   > header {
+    margin-bottom: 2rem;
+
     .brand {
       display: inline-block;
 
