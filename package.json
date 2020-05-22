@@ -9,7 +9,7 @@
     "content": "hugo new --kind article-bundle"
   },
   "x": {
-    "js": "themes/simple/src/js/event.js themes/simple/src/js/clipboard.js themes/simple/src/js/re.js themes/simple/src/js/className.js src/js/share_text.js src/js/theme.js src/js/search.js",
+    "js": "themes/simple/src/js/event.js themes/simple/src/js/clipboard.js themes/simple/src/js/re.js themes/simple/src/js/className.js src/js/share_text.js src/js/theme.js src/js/search.js src/js/emailoctopus.js",
     "css": "src/css/index.css"
   },
   "devDependencies": {

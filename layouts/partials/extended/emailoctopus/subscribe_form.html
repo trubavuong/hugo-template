@@ -1,0 +1,24 @@
+{{ $listId := $.listId }}
+{{ $class := $.class }}
+{{ $title := $.title }}
+{{ $description := $.description }}
+{{ $submitText := ($.submitText | default "Subscribe") }}
+{{ $successText := ($.successText | default "Thank you for subscribing.") }}
+{{ $placeholder := ($.placeholder | default "Enter your email") }}
+
+<div class="subscribe-form{{ with $class }} {{ . }}{{ end }}">
+  {{ with $title }}
+    <h2>{{ . }}</h2>
+  {{ end }}
+
+  {{ with $description }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  <form method="post" action="https://emailoctopus.com/lists/{{ $listId }}/members/embedded/1.3/add">
+    <input type="email" placeholder="{{ $placeholder }}" required>
+    <button type="submit">{{ $submitText }}</button>
+  </form>
+
+  <p class="feedback" data-success="{{ $successText }}"></p>
+</div>

@@ -111,6 +111,16 @@ params:
     enable: true
     placeholder: Search Articles...
 
+  emailoctopus:
+    subscribe_form:
+      listId: ad61168e-9be4-11ea-a3d0-06b4694bee2a
+      class:
+      title: Just Subscribe
+      description:
+      submitText: Subscribe
+      successText: Thank you for subscribing.
+      placeholder: Enter your email
+
 author:
   name: *authorName
   email: *authorEmail
