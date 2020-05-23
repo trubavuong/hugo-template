@@ -3,6 +3,11 @@
     background: $surface_background;
   }
 
+  button {
+    color: $link_hover_text;
+    background: $link_text;
+  }
+
   a {
     color: $link_text;
 

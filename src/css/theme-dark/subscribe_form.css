@@ -1,0 +1,5 @@
+.dark {
+  .subscribe-form {
+    background: $surface_background;
+  }
+}

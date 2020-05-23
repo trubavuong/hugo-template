@@ -98,6 +98,10 @@ th:not([align]) {
 }
 
 button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  color: $link_hover_text;
+  background: $link_text;
   cursor: pointer;
 }
 
