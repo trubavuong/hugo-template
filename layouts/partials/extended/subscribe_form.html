@@ -9,7 +9,7 @@
 
 <div class="subscribe-form{{ with $class }} {{ . }}{{ end }}">
   {{ with $title }}
-    <h2>{{ . }}</h2>
+    <h3>{{ . }}</h3>
   {{ end }}
 
   {{ with $description }}
@@ -21,6 +21,5 @@
     <button type="submit">{{ $submitText }}</button>
   </form>
 
-  <p class="help">No spam, ever</p>
   <p class="feedback" data-success="{{ $successText }}"></p>
 </div>

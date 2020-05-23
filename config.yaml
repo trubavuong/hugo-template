@@ -126,11 +126,11 @@ params:
       url: https://app.sender.net/forms/sender_subscription/12239/3f090bd3
       emailFieldName: email
       class:
-      title: Just Subscribe
-      description:
+      title: Get new articles to your inbox
+      description: Approximately 1 email a week.
       submitText: Subscribe
       successText: Thank you for subscribing.
-      placeholder: Enter your email
+      placeholder: Your email
 
 author:
   name: *authorName
