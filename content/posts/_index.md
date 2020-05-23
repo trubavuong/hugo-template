@@ -1,8 +1,8 @@
 ---
 title: Posts
 
-emailoctopusKey:
+subscribeFormKey:
 
 cascade:
-  emailoctopusKey: subscribe_form
+  subscribeFormKey: sender
 ---

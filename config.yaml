@@ -111,9 +111,20 @@ params:
     enable: true
     placeholder: Search Articles...
 
-  emailoctopus:
-    subscribe_form:
-      listId: ad61168e-9be4-11ea-a3d0-06b4694bee2a
+  subscribeForm:
+    emailoctopus:
+      url: https://emailoctopus.com/lists/ad61168e-9be4-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add
+      emailFieldName: field_0
+      class:
+      title: Just Subscribe
+      description:
+      submitText: Subscribe
+      successText: Thank you for subscribing.
+      placeholder: Enter your email
+
+    sender:
+      url: https://app.sender.net/forms/sender_subscription/12239/3f090bd3
+      emailFieldName: email
       class:
       title: Just Subscribe
       description:

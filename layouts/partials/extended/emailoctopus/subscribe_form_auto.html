@@ -1,5 +1,0 @@
-{{ with .Params.emailoctopusKey }}
-  {{ with index $.Site.Params.emailoctopus . }}
-    {{ partial "extended/emailoctopus/subscribe_form.html" . }}
-  {{ end }}
-{{ end }}

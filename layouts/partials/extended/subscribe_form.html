@@ -1,4 +1,5 @@
-{{ $listId := $.listId }}
+{{ $url := $.url }}
+{{ $emailFieldName := $.emailFieldName }}
 {{ $class := $.class }}
 {{ $title := $.title }}
 {{ $description := $.description }}
@@ -15,8 +16,8 @@
     <p>{{ . }}</p>
   {{ end }}
 
-  <form method="post" action="https://emailoctopus.com/lists/{{ $listId }}/members/embedded/1.3/add">
-    <input type="email" placeholder="{{ $placeholder }}" required>
+  <form method="post" action="{{ $url }}">
+    <input type="email" placeholder="{{ $placeholder }}" name="{{ $emailFieldName }}" required>
     <button type="submit">{{ $submitText }}</button>
   </form>
 

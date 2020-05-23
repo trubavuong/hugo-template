@@ -1,0 +1,5 @@
+{{ with .Params.subscribeFormKey }}
+  {{ with index $.Site.Params.subscribeForm . }}
+    {{ partial "extended/subscribe_form.html" . }}
+  {{ end }}
+{{ end }}
