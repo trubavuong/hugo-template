@@ -1,0 +1,9 @@
+{{ $user := .Get "user" }}
+{{ $pen := .Get "pen" }}
+{{ $caption := (.Get "caption" | default (printf "The Pen %s" $pen)) }}
+{{ $height := (.Get "height" | default 265) }}
+
+<figure>
+  <iframe loading="lazy" src="https://codepen.io/{{ $user }}/embed/{{ $pen }}?height={{ $height }}&theme-id=default&default-tab=result" height="{{ $height }}" scrolling="no" allowtransparency="true"></iframe>
+  <figcaption><p>{{ $caption }}</p></figcaption>
+</figure>

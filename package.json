@@ -1,0 +1,24 @@
+{
+  "name": "hugo-template",
+  "version": "1.0.0",
+  "scripts": {
+    "build-js": "uglifyjs $npm_package_x_js --compress --mangle --output assets/bundle.min.js",
+    "build-css": "postcss $npm_package_x_css --no-map --output assets/bundle.min.css",
+    "build": "npm run build-js && npm run build-css",
+    "dev": "hugo server --disableFastRender --minify",
+    "content": "hugo new --kind article-bundle"
+  },
+  "x": {
+    "js": "themes/simple/src/js/event.js themes/simple/src/js/clipboard.js themes/simple/src/js/re.js themes/simple/src/js/className.js src/js/share_text.js src/js/theme.js src/js/search.js src/js/subscription_form_sender.js",
+    "css": "src/css/index.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
+    "uglify-js": "^3.8.1"
+  }
+}

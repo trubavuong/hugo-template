@@ -1,0 +1,46 @@
+{{ define "layout" }}
+  {{ partial "extended/header.html" . }}
+
+  <main>
+    <div class="container">
+      <div class="search-company">
+        <h1>{{ partial `function/get_page_title.html` . }}</h1>
+
+        {{ with (partial `function/get_page_description.html` .) }}
+          <p>{{ . }}</p>
+        {{ end }}
+
+        {{ $pages := .Pages }}
+        {{ $order := .Param "order" }}
+        {{ if eq $order "ByDate" }}
+          {{ $pages = .Pages.ByDate }}
+        {{ else if eq $order "ByDate.Reverse" }}
+          {{ $pages = .Pages.ByDate.Reverse }}
+        {{ else if eq $order "ByTitle" }}
+          {{ $pages = .Pages.ByTitle }}
+        {{ else if eq $order "ByTitle.Reverse" }}
+          {{ $pages = .Pages.ByTitle.Reverse }}
+        {{ end }}
+
+        {{ $paginate := .Param "paginate" }}
+        {{ $paginator := .Paginate $pages $paginate }}
+
+        {{ with $paginator.Pages }}
+          <ul>
+            {{ range . }}
+              <li>{{ .Render "_view_summary" }}</li>
+            {{ end }}
+          </ul>
+        {{ end }}
+
+        {{ partial "pagination.html" . }}
+
+        {{ partial "extended/subscription_form_auto.html" . }}
+      </div>
+
+      {{ partial "search.html" . }}
+    </div>
+  </main>
+
+  {{ partial "extended/footer.html" . }}
+{{ end }}

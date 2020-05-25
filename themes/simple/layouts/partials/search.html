@@ -1,0 +1,23 @@
+{{ $is404Page := (eq .Kind "404") }}
+{{ $isAlwaysVisible := or $is404Page (.Param `search.visible`) }}
+
+<div class="search"{{ if (not $isAlwaysVisible) }} style="display:none"{{ end }}>
+  <div class="search-header">
+    <div class="search-buttons">
+      <ul class="inline-list">
+        <li>
+          <button class="search-clear">Clear</button>
+        </li>
+        {{- if not $isAlwaysVisible -}}
+          <li>
+            <button class="search-close">Close</button>
+          </li>
+        {{- end -}}
+      </ul>
+    </div>
+
+    <input type="text" placeholder="{{ .Site.Params.search.placeholder | default `Search...` }}" class="search-input">
+  </div>
+
+  <div class="search-results"></div>
+</div>

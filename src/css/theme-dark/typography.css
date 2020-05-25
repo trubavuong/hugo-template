@@ -1,0 +1,25 @@
+.dark {
+  th {
+    background: $surface_background;
+  }
+
+  button,
+  .btn {
+    color: $link_hover_text;
+    background: $link_text;
+  }
+
+  a {
+    color: $link_text;
+
+    &:hover {
+      color: $link_hover_text;
+      background: $link_text;
+    }
+  }
+
+  body {
+    color: $body_text;
+    background: $body_background;
+  }
+}

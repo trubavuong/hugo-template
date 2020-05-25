@@ -1,0 +1,16 @@
+<article class="article-summary">
+  <header>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  </header>
+
+  {{ with (partial `function/get_page_description.html` .) }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  {{ if .IsPage }}
+    <footer>
+      {{ partial "terms.html" (dict "global" . "taxonomy" "tags" "delim" "," "class" "inline-list inline-list-sm") }}
+      <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    </footer>
+  {{ end }}
+</article>

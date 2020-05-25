@@ -1,0 +1,13 @@
+{{ $lang := .Get "lang" }}
+{{ $title := .Get "title" }}
+{{ $options := .Get "options" }}
+{{ $inner := trim .Inner "\n\r" }}
+
+<div class="codeblock">
+  <div class="codeblock-header">
+    <span class="codeblock-title">{{ $title | default $lang }}</span>
+  </div>
+  <div class="codeblock-body">
+    {{ highlight $inner $lang $options }}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+$primary_100: $yellow_100;
+$primary_200: $yellow_200;
+$primary_300: $yellow_300;
+$primary_400: $yellow_400;
+$primary_500: $yellow_500;
+$primary_600: $yellow_600;
+$primary_700: $yellow_700;
+$primary_800: $yellow_800;
+$primary_900: $yellow_900;
+
+$body_text: $white;
+$body_background: #35363a;
+
+$surface_text: $gray_100;
+$surface_background: $gray_800;
+
+$link_text: $primary_500;
+$link_hover_text: $gray_900;

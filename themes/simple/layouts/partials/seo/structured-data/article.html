@@ -1,0 +1,52 @@
+{{ if .IsPage }}
+  {{ $iso8601 := "2006-01-02T15:04:05-07:00" }}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      "headline": {{ .Title | partial "function/stringify.html" }},
+      {{ with (partial "function/get_page_images.html" .) }}
+        "image": [
+          {{ range $index, $value := . }}
+            {{ if ne $index 0 }},{{ end }}
+            {{ $value | absURL }}
+          {{ end }}
+        ],
+      {{ end }}
+      {{ if not .PublishDate.IsZero }}"datePublished": {{ .PublishDate.Format $iso8601 }},{{ else if not .Date.IsZero }}"datePublished": {{ .Date.Format $iso8601 }},{{ end }}
+      {{ if not .Lastmod.IsZero }}"dateModified": {{ .Lastmod.Format $iso8601 }},{{ end }}
+      {{ with .Params.authors }}
+        "author": [
+          {{ range $index, $value := . }}
+            {{ if ne $index 0 }},{{ end }}
+            {
+              "@type": "Person",
+              "name": {{ $value.name | partial "function/stringify.html" }}
+            }
+          {{ end }}
+        ],
+      {{ else }}
+        {{ with .Site.Params.author.name }}
+          "author": {
+            "@type": "Person",
+            "name": {{ . | partial "function/stringify.html" }}
+          },
+        {{ end }}
+      {{ end }}
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ .Site.Title | partial "function/stringify.html" }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ .Site.Params.publisher.logo | absURL }}"
+        }
+      },
+      "description": {{ partial `function/get_page_description.html` . | partial "function/stringify.html" }}
+    }
+  </script>
+{{ end }}

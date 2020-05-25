@@ -1,0 +1,13 @@
+.search-header {
+  margin: 1rem 0;
+}
+
+.search-buttons {
+  float: right;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+}

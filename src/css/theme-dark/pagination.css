@@ -1,0 +1,12 @@
+.dark {
+  .pagination {
+    a {
+      color: $surface_text;
+    }
+
+    a:hover,
+    .active a {
+      background: $surface_background;
+    }
+  }
+}

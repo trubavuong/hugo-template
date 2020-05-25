@@ -1,0 +1,5 @@
+.dark {
+  .highlight {
+    border: 1px solid $surface_border;
+  }
+}

@@ -1,0 +1,8 @@
+{{ $pages := slice }}
+{{ range .Site.RegularPages }}
+  {{ $description := partial `function/get_page_description.html` . }}
+  {{ $item := (dict "url" .RelPermalink "title" .Title "description" $description) }}
+  {{ $pages = $pages | append $item }}
+{{ end }}
+
+{{ $pages | jsonify }}

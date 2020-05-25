@@ -1,0 +1,17 @@
+{{ range .Site.Params.js }}
+  {{ $src := (. | relURL) }}
+  {{ $integrity := "" }}
+
+  {{ if not (and (hasPrefix . "http://") (hasPrefix . "https://")) }}
+    {{ $resource := resources.Get . }}
+    {{ with $resource }}
+      {{ $script := . | fingerprint "sha512" }}
+      {{ $src = $script.RelPermalink }}
+      {{ $integrity = $script.Data.Integrity }}
+    {{ end }}
+  {{ end }}
+
+  <script src="{{ $src }}"{{ with $integrity }} integrity="{{ . }}"{{ end }}></script>
+{{ end }}
+
+{{ partial "google_analytics.html" . }}

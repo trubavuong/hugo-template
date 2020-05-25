@@ -1,0 +1,7 @@
+{{ $result := "" }}
+
+{{ with .Summary }}
+  {{ $result = . }}
+{{ end }}
+
+{{ return $result }}

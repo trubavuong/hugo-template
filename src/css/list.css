@@ -1,0 +1,15 @@
+.inline-list {
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    margin-left: 1.5rem;
+  }
+}
+
+.inline-list-sm {
+  li + li {
+    margin-left: 0.5rem;
+  }
+}

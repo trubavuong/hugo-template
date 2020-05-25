@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}"{{ with .Site.Params.theme.class }} class="{{ . }}"{{ end }}>
+  <head>
+    <title>{{ block "title" . }}{{ if not .IsHome }}{{ partial `function/get_page_title.html` . }} {{ .Site.Params.titleDelim | default "|" }} {{ end }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "seo/index.html" . }}
+    {{ partial "favicon.html" . }}
+    {{ partial "css.html" . }}
+  </head>
+  <body>
+    {{ block "layout" . }}{{ end }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

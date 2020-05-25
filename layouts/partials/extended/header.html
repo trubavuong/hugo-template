@@ -1,0 +1,23 @@
+<header>
+  <div class="container">
+    <div class="brand">
+      <a href="/">
+        <img src="/favicon-32x32.png" alt="logo">
+        {{ with .Site.Params.author }}{{ .name }}{{ end }}
+      </a>
+    </div>
+    <ul class="inline-list">
+      {{- if and .Site.Params.theme.enable -}}
+        <li>
+          <a href="#" class="theme-toggler">{{ .Site.Params.theme.nextThemeText | default "Theme" }}</a>
+        </li>
+      {{- end -}}
+
+      {{- if .Param "search.enable" -}}
+        <li>
+          <a href="#" class="search-opener">Search</a>
+        </li>
+      {{- end -}}
+    </ul>
+  </div>
+</header>

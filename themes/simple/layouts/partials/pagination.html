@@ -1,0 +1,30 @@
+{{ $paginator := $.Paginator }}
+{{ $totalPages := $paginator.TotalPages }}
+
+{{ if gt $totalPages 1 }}
+  {{ $pageNumber := $paginator.PageNumber }}
+  {{ $paginationConfig := $.Site.Params.pagination }}
+
+  {{ $start1 := 1 }}
+  {{ $start2 := add $start1 $paginationConfig.spanStart }}
+
+  {{ $middle1 := sub $pageNumber $paginationConfig.spanMiddleLeft }}
+  {{ $middle2 := add $pageNumber $paginationConfig.spanMiddleRight }}
+  {{ $middle3 := add $middle2 1 }}
+  {{ $middle4 := sub $middle1 1 }}
+
+  {{ $end2 := $totalPages }}
+  {{ $end1 := sub $end2 $paginationConfig.spanEnd }}
+
+  <ul class="pagination inline-list">
+    {{ range $paginator.Pagers }}
+      {{ if or (and (ge .PageNumber $start1) (le .PageNumber $start2)) (and (ge .PageNumber $middle1) (le .PageNumber $middle2)) (and (ge .PageNumber $end1) (le .PageNumber $end2)) }}
+        <li{{ if eq .PageNumber $pageNumber }} class="active"{{ end }}>
+          <a href="{{ .URL }}">{{ .PageNumber }}</a>
+        </li>
+      {{ else if or (eq .PageNumber $middle3) (eq .PageNumber $middle4) }}
+        <li>&hellip;</li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,0 +1,64 @@
+.article-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.article-meta {
+  padding: 1rem;
+  font-size: $font_size_sm;
+
+  > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.article-body {
+  > * + *,
+  blockquote > * + * {
+    margin-top: 1rem;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
+  }
+
+  h2,
+  h3 {
+    margin-top: 3rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul,
+  ol {
+    margin-left: 2.5rem;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+
+  a {
+    border-bottom: 1px solid $link_text;
+  }
+}
+
+.article-summary {
+  margin: 2rem 0;
+
+  > * + * {
+    margin-top: 0.5rem;
+  }
+
+  .tags {
+    display: inline-block;
+
+    &::after {
+      content: "\2014";
+      margin: 0 1rem;
+    }
+  }
+}

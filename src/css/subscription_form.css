@@ -1,0 +1,33 @@
+.subscription-form {
+  margin: 2rem 0;
+  text-align: center;
+
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  .subscription-form-footer {
+    font-size: $font_size_sm;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input {
+    margin: 0 0 1rem 0;
+    padding: 0.375rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    form {
+      flex-direction: row;
+    }
+
+    input {
+      margin: 0 1rem 0 0;
+    }
+  }
+}

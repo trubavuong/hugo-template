@@ -1,0 +1,24 @@
+.share {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.share-header {
+  padding: 0.5rem 0;
+  font-weight: 700;
+}
+
+.share-body {
+  a {
+    svg {
+      width: $icon_size;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(-0.25rem);
+      }
+    }
+  }
+}

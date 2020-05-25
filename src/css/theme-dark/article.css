@@ -1,0 +1,7 @@
+.dark {
+  .article-body {
+    a {
+      border-color: $link_text;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  // Place your rank-values workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+
+  "tag": {
+    "scope": "yaml",
+    "prefix": "tag",
+    "body": ["- ${1|css,js,html|}"],
+    "description": "Tag"
+  },
+
+  "toc": {
+    "scope": "markdown",
+    "prefix": "toc",
+    "body": ["{{< toc >}}"],
+    "description": "TOC ShortCode"
+  },
+
+  "link": {
+    "scope": "markdown",
+    "prefix": "link",
+    "body": ["[${1:text}](${2:url})"],
+    "description": "Link ShortCode"
+  },
+
+  "img": {
+    "scope": "markdown",
+    "prefix": "img",
+    "body": ["![${1:alt}](${2:url})"],
+    "description": "Image ShortCode"
+  },
+
+  "img-figure": {
+    "scope": "markdown",
+    "prefix": "img-figure",
+    "body": ["{{< figure src=\"${1}\" alt=\"${2}\" caption=\"${2}\" >}}"],
+    "description": "Image Figure ShortCode"
+  },
+
+  "instagram": {
+    "scope": "markdown",
+    "prefix": "instagram",
+    "body": ["{{< instagram ${1:id} ${2:hidecaption} >}}"],
+    "description": "Instagram ShortCode"
+  },
+
+  "tweet": {
+    "scope": "markdown",
+    "prefix": "tweet",
+    "body": ["{{< tweet ${1:id} >}}"],
+    "description": "Tweet ShortCode"
+  },
+
+  "youtube": {
+    "scope": "markdown",
+    "prefix": "youtube",
+    "body": ["{{< youtube ${1:id} >}}"],
+    "description": "Youtube ShortCode"
+  },
+
+  "codepen": {
+    "scope": "markdown",
+    "prefix": "codepen",
+    "body": ["[${1:text}](https://codepen.io/${2:user}/pen/${3:pen})"],
+    "description": "CodePen ShortCode"
+  },
+
+  "codepen-embed": {
+    "scope": "markdown",
+    "prefix": "codepen-embed",
+    "body": [
+      "{{< codepen user=\"${1}\" pen=\"${2}\" caption=\"${3}\" height=\"${4:265}\" >}}"
+    ],
+    "description": "CodePen Embed ShortCode"
+  },
+
+  "codesandbox": {
+    "scope": "markdown",
+    "prefix": "codesandbox",
+    "body": ["[${1:text}](https://codesandbox.io/s/${2:id})"],
+    "description": "CodeSandbox ShortCode"
+  },
+
+  "codesandbox-embed": {
+    "scope": "markdown",
+    "prefix": "codesandbox-embed",
+    "body": [
+      "{{< codesandbox id=\"${1}\" caption=\"${2}\" height=\"${3:265}\" >}}"
+    ],
+    "description": "CodeSandbox Embed ShortCode"
+  }
+}

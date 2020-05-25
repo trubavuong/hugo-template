@@ -1,0 +1,11 @@
+{{ define "layout" }}
+  {{ partial "extended/header.html" . }}
+
+  <main>
+    <div class="container">
+      {{ partial "search.html" . }}
+    </div>
+  </main>
+
+  {{ partial "extended/footer.html" . }}
+{{ end }}

@@ -1,0 +1,39 @@
+{{ $global := $.global }}
+{{ $taxonomy := $.taxonomy }}
+{{ $class := $.class }}
+{{ $delim := ($.delim | default "") }}
+{{ $prefix := ($.prefix | default "") }}
+{{ $suffix := ($.suffix | default "") }}
+{{ $all := $.all }}
+
+{{ $terms := slice }}
+{{ if $all }}
+  {{ range (index $global.Site.Taxonomies $taxonomy).Alphabetical }}
+    {{ $terms = $terms | append .Name }}
+  {{ end }}
+{{ else }}
+  {{ $terms = index $global.Params $taxonomy }}
+{{ end }}
+
+{{ with $terms }}
+  {{ $len := len . }}
+  {{ $lastIndex := sub $len 1 }}
+  <ul class="{{ $taxonomy }}{{ with $class }} {{ . }}{{ end }}">
+    {{ range $index, $value := . }}
+      {{ $urlWithoutTrailingSlash := (printf "/%s/%s" ($taxonomy | urlize) ($value | urlize)) }}
+      {{ $url := (printf "%s/" $urlWithoutTrailingSlash) }}
+
+      {{ $name := $value }}
+      {{ with ($global.Site.GetPage $urlWithoutTrailingSlash) }}
+        {{ $name = .Title }}
+      {{ end }}
+
+      <li>
+        <a href="{{ $url }}">{{ $prefix }}{{ $name }}{{ $suffix }}</a>
+        {{- if and $delim (ne $index $lastIndex) -}}
+          {{- $delim -}}
+        {{- end -}}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

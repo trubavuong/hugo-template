@@ -1,0 +1,1 @@
+function copy(e) { var t = document.createElement("textarea"); t.value = e, t.setAttribute("readonly", ""), t.style = { display: "none" }, document.body.appendChild(t), t.select(), document.execCommand("copy"), document.body.removeChild(t) }

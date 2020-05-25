@@ -1,0 +1,66 @@
+{{ $shares := .Param "share" }}
+
+{{ if $shares }}
+  {{ $url := .Permalink | absURL }}
+  {{ $title := .Title }}
+  {{ $description := partial `function/get_page_description.html` . }}
+
+  {{ $tags := "" }}
+  {{ with .Params.tags }}
+    {{ $tags = delimit . "," }}
+  {{ end }}
+
+  {{ $twitter := "" }}
+  {{ with .Params.authors }}
+    {{ if eq (len .) 1 }}
+      {{ with (index . 0) }}
+        {{ with .twitter }}
+          {{ $twitter = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ with .Site.Params.author }}
+      {{ with .twitter }}
+        {{ $twitter = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $len := len $shares }}
+  {{ $lastIndex := sub $len 1 }}
+
+  <div class="share">
+    <span>Share on </span>
+    {{- range $index, $value := $shares -}}
+      {{- $delim := "" -}}
+      {{- if and (gt $len 1) (eq $index $lastIndex) -}}
+        {{- $delim = " or " -}}
+      {{- else if gt $index 0 -}}
+        {{- $delim = ", " -}}
+      {{- end -}}
+
+      {{- if eq $value "facebook" -}}
+        {{- $delim -}} <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url }}" rel="nofollow noopener noreferrer" target="_blank">Facebook</a>
+      {{- else if eq $value "twitter" -}}
+        {{- $delim -}} <a href="https://twitter.com/intent/tweet?text={{ $title }}&url={{ $url }}{{ with $tags }}&hashtags={{ . }}{{ end }}{{ with $twitter }}&via={{ . }}{{ end }}" rel="nofollow noopener noreferrer" target="_blank">Twitter</a>
+      {{- else if eq $value "reddit" -}}
+        {{- $delim -}} <a href="https://www.reddit.com/submit?url={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank">Reddit</a>
+      {{- else if eq $value "linkedin" -}}
+        {{- $delim -}} <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}&summary={{ $description }}" rel="nofollow noopener noreferrer" target="_blank">LinkedIn</a>
+      {{- else if eq $value "vk" -}}
+        {{- $delim -}} <a href="https://vk.com//share.php?url={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank">VK</a>
+      {{- else if eq $value "tumblr" -}}
+        {{- $delim -}} <a href="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl={{ $url }}&title={{ $title }}" rel="nofollow noopener noreferrer" target="_blank">Tumblr</a>
+      {{- else if eq $value "telegram" -}}
+        {{- $delim -}} <a href="https://telegram.me/share/url?url={{ $url }}&text={{ $title }}" rel="nofollow noopener noreferrer" target="_blank">Telegram</a>
+      {{- else if eq $value "whatsapp" -}}
+        {{- $delim -}} <a href="whatsapp://send?text={{ $title }} - {{ $url }}" rel="nofollow noopener noreferrer" target="_blank">WhatsApp</a>
+      {{- else if eq $value "copy" -}}
+        {{- $delim -}} <a href="#" rel="nofollow" class="copy-link">Copy Link</a>
+      {{- else if eq $value "email" -}}
+        {{- $delim -}} <a href="mailto:?subject={{ $title }}&body={{ $url }}" rel="nofollow noopener noreferrer" target="_blank">Email</a>
+      {{- end -}}
+    {{- end -}}
+  </div>
+{{ end }}
