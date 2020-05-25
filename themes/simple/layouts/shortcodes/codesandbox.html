@@ -3,6 +3,6 @@
 {{ $height := (.Get "height" | default 265) }}
 
 <figure>
-  <iframe src="https://codesandbox.io/embed/{{ $id }}?fontsize=14&hidenavigation=1&theme=dark" height="{{ $height }}" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+  <iframe loading="lazy" src="https://codesandbox.io/embed/{{ $id }}?fontsize=14&hidenavigation=1&theme=dark&view=preview" height="{{ $height }}" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
   <figcaption><p>{{ $caption }}</p></figcaption>
 </figure>
