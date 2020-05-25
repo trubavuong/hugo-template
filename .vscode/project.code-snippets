@@ -66,18 +66,32 @@
   "codepen": {
     "scope": "markdown",
     "prefix": "codepen",
+    "body": ["[${1:text}](https://codepen.io/${2:user}/pen/${3:pen})"],
+    "description": "CodePen ShortCode"
+  },
+
+  "codepen-embed": {
+    "scope": "markdown",
+    "prefix": "codepen-embed",
     "body": [
       "{{< codepen user=\"${1}\" pen=\"${2}\" caption=\"${3}\" height=\"${4:265}\" >}}"
     ],
-    "description": "CodePen ShortCode"
+    "description": "CodePen Embed ShortCode"
   },
 
   "codesandbox": {
     "scope": "markdown",
     "prefix": "codesandbox",
+    "body": ["[${1:text}](https://codesandbox.io/s/${2:id})"],
+    "description": "CodeSandbox ShortCode"
+  },
+
+  "codesandbox-embed": {
+    "scope": "markdown",
+    "prefix": "codesandbox-embed",
     "body": [
       "{{< codesandbox id=\"${1}\" caption=\"${2}\" height=\"${3:265}\" >}}"
     ],
-    "description": "CodeSandbox ShortCode"
+    "description": "CodeSandbox Embed ShortCode"
   }
 }
