@@ -2,7 +2,7 @@ baseURL: http://example.org/
 languageCode: en
 title: My New "Hugo Site"
 theme: simple
-googleAnalytics: UA-123456
+googleAnalytics: UA-150679205-1
 enableRobotsTXT: true
 
 taxonomies:
