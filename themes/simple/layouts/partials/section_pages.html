@@ -44,7 +44,7 @@
       </ul>
 
       {{ if and $morePagesText (gt (len .) $limit) }}
-        <a href="{{ printf `%s/` $section }}">{{ $morePagesText | safeHTML }}</a>
+        <a class="btn" href="{{ printf `%s/` $section }}">{{ $morePagesText | safeHTML }}</a>
       {{ end }}
     </section>
   {{ end }}

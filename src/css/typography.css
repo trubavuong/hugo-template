@@ -97,7 +97,8 @@ th:not([align]) {
   text-align: left;
 }
 
-button {
+button,
+.btn {
   padding: 0.5rem 1rem;
   border: 0;
   color: $link_hover_text;

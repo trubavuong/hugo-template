@@ -3,7 +3,8 @@
     background: $surface_background;
   }
 
-  button {
+  button,
+  .btn {
     color: $link_hover_text;
     background: $link_text;
   }
