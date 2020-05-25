@@ -38,7 +38,7 @@
     }
   }
 
-  var forms = document.querySelectorAll(".subscribe-form form");
+  var forms = document.querySelectorAll(".subscription-form form");
   for (var i = 0; i < forms.length; i += 1) {
     addEvent(forms[i], "submit", submit);
   }

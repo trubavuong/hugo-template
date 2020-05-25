@@ -1,8 +1,8 @@
 ---
 title: Posts
 
-subscribeFormKey:
+subscriptionFormKey:
 
 cascade:
-  subscribeFormKey: sender
+  subscriptionFormKey: sender
 ---

@@ -7,7 +7,7 @@
 {{ $successText := ($.successText | default "Thank you for subscribing.") }}
 {{ $placeholder := ($.placeholder | default "Enter your email") }}
 
-<div class="subscribe-form{{ with $class }} {{ . }}{{ end }}">
+<div class="subscription-form{{ with $class }} {{ . }}{{ end }}">
   {{ with $title }}
     <h3>{{ . }}</h3>
   {{ end }}
