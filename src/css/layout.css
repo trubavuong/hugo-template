@@ -10,10 +10,6 @@ body {
 
     .brand {
       display: inline-block;
-
-      img {
-        width: $icon_size;
-      }
     }
 
     .inline-list {

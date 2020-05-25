@@ -6,6 +6,7 @@
 @import "./syntax.css";
 @import "./list.css";
 @import "./search.css";
+@import "./site_head.css";
 @import "./subscription_form.css";
 
 @import "./theme-dark/index.css";
