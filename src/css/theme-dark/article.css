@@ -1,8 +1,4 @@
 .dark {
-  .article-meta {
-    background: $surface_background;
-  }
-
   .article-body {
     a {
       border-color: $link_text;
