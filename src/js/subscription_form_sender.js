@@ -11,7 +11,7 @@
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send(emailInput.name + "=" + encodeURIComponent(emailInput.value));
 
-        var feedbackElement = form.parentNode.querySelector(".feedback");
+        var feedbackElement = form.parentNode.querySelector(".subscription-form-feedback");
         if (feedbackElement) {
           feedbackElement.innerText = feedbackElement.getAttribute("data-success");
           form.style.display = "none";

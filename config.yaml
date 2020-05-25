@@ -121,6 +121,7 @@ params:
       submitText: Subscribe
       successText: Thank you for subscribing.
       placeholder: Enter your email
+      footer:
 
     sender:
       url: https://app.sender.net/forms/sender_subscription/12239/3f090bd3
@@ -131,6 +132,7 @@ params:
       submitText: Subscribe
       successText: Thank you for subscribing.
       placeholder: Your email
+      footer: <a href="http://sender.net" rel="nofollow noopener noreferrer" target="_blank">Powered by Sender.net</a>
 
 author:
   name: *authorName

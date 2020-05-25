@@ -2,6 +2,7 @@
 {{ $emailFieldName := $.emailFieldName }}
 {{ $class := $.class }}
 {{ $title := $.title }}
+{{ $footer := $.footer }}
 {{ $description := $.description }}
 {{ $submitText := ($.submitText | default "Subscribe") }}
 {{ $successText := ($.successText | default "Thank you for subscribing.") }}
@@ -21,5 +22,9 @@
     <button type="submit">{{ $submitText }}</button>
   </form>
 
-  <p class="feedback" data-success="{{ $successText }}"></p>
+  <p class="subscription-form-feedback" data-success="{{ $successText }}"></p>
+
+  {{ with $footer }}
+    <p class="subscription-form-footer">{{ . | safeHTML }}</p>
+  {{ end }}
 </div>

@@ -1,6 +1,6 @@
 (function () {
   function handleFeedback(form, error) {
-    var feedbackElement = form.parentNode.querySelector(".feedback");
+    var feedbackElement = form.parentNode.querySelector(".subscription-form-feedback");
     if (feedbackElement) {
       if (error) {
         feedbackElement.innerText = error.message;

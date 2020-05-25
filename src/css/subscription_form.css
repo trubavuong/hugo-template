@@ -2,11 +2,18 @@
   margin: 2rem 0;
   text-align: center;
 
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  .subscription-form-footer {
+    font-size: $font_size_sm;
+  }
+
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 1rem;
   }
 
   input {
