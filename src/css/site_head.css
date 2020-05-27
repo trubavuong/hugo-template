@@ -1,6 +1,6 @@
 .site-head {
   margin-bottom: 3rem;
   padding: 1rem;
-  border: 4px dashed;
+  background: $surface_background;
   text-align: center;
 }

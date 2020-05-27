@@ -1,0 +1,5 @@
+.dark {
+  .site-head {
+    background: $surface_background;
+  }
+}

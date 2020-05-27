@@ -111,6 +111,7 @@ params:
     enable: true
     placeholder: Search Articles...
 
+  subscriptionFormKey: tinyletter
   subscriptionForm:
     emailoctopus:
       url: https://emailoctopus.com/lists/ad61168e-9be4-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add
@@ -119,7 +120,6 @@ params:
       title: Just Subscribe
       description:
       submitText: Subscribe
-      successText: Thank you for subscribing.
       placeholder: Enter your email
       footer:
 
@@ -130,9 +130,18 @@ params:
       title: Get new articles to your inbox
       description: Approximately 1 email a week.
       submitText: Subscribe
-      successText: Thank you for subscribing.
       placeholder: Your email
       footer: <a href="http://sender.net" rel="nofollow noopener noreferrer" target="_blank">Powered by Sender.net</a>
+
+    tinyletter:
+      url: https://tinyletter.com/bodi_vomoto_com
+      emailFieldName: email
+      class:
+      title: Get new articles to your inbox
+      description: Approximately 1 email a week.
+      submitText: Subscribe
+      placeholder: Your email
+      footer: <a href="https://tinyletter.com" rel="nofollow noopener noreferrer" target="_blank">Powered by TinyLetter</a>
 
 author:
   name: *authorName
