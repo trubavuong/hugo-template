@@ -132,6 +132,16 @@ params:
       placeholder: Your email
       footer: <a href="http://sender.net" rel="nofollow noopener noreferrer" target="_blank">Powered by Sender.net</a>
 
+    tinyletter:
+      url: https://tinyletter.com/bodi_vomoto_com
+      emailFieldName: email
+      class:
+      title: Get new articles to your inbox
+      description: Approximately 1 email a week.
+      submitText: Subscribe
+      placeholder: Your email
+      footer: <a href="https://tinyletter.com" rel="nofollow noopener noreferrer" target="_blank">Powered by TinyLetter</a>
+
 author:
   name: *authorName
   email: *authorEmail
