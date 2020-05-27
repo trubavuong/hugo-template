@@ -5,7 +5,6 @@
 {{ $footer := $.footer }}
 {{ $description := $.description }}
 {{ $submitText := ($.submitText | default "Subscribe") }}
-{{ $successText := ($.successText | default "Thank you for subscribing.") }}
 {{ $placeholder := ($.placeholder | default "Enter your email") }}
 
 <div class="subscription-form{{ with $class }} {{ . }}{{ end }}">
@@ -17,12 +16,10 @@
     <p>{{ . }}</p>
   {{ end }}
 
-  <form method="post" action="{{ $url }}">
+  <form method="post" action="{{ $url }}" rel="nofollow noopener noreferrer" target="_blank">
     <input type="email" placeholder="{{ $placeholder }}" name="{{ $emailFieldName }}" required>
     <button type="submit">{{ $submitText }}</button>
   </form>
-
-  <p class="subscription-form-feedback" data-success="{{ $successText }}"></p>
 
   {{ with $footer }}
     <p class="subscription-form-footer">{{ . | safeHTML }}</p>

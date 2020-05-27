@@ -119,7 +119,6 @@ params:
       title: Just Subscribe
       description:
       submitText: Subscribe
-      successText: Thank you for subscribing.
       placeholder: Enter your email
       footer:
 
@@ -130,7 +129,6 @@ params:
       title: Get new articles to your inbox
       description: Approximately 1 email a week.
       submitText: Subscribe
-      successText: Thank you for subscribing.
       placeholder: Your email
       footer: <a href="http://sender.net" rel="nofollow noopener noreferrer" target="_blank">Powered by Sender.net</a>
 
