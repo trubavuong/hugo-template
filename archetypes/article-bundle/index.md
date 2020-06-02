@@ -1,7 +1,8 @@
 ---
 draft: false
 date: {{ .Date }}
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace (replaceRE "^\\d{6}-" "" .Name) "-" " " | title }}"
+slug: "{{ replaceRE "^\\d{6}-" "" .Name }}"
 summary:
 tags:
   -
